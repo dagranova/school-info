@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulop National High School</title>
+    <!-- Font Awesome Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ===== MAIN STYLESHEET ===== -->
+    <style>
+        /* ========================================
+            RESET AND BASE STYLES 
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========================================
+            HEADER SECTION - SCHOOL BRANDING
+           ======================================== */
+        header {
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+            color: white;
+            padding: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .school-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        /* School Logo Image */
+        .school-logo {
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffd700;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .school-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer-school-logo {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #ffd700;
+            border-radius: 6px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+        
+        .school-name {
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .school-tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+        }
+        
+        /* DepEd Badge */
+        .deped-badge {
+            background: linear-gradient(135deg, #c00 0%, #990000 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 10px rgba(192, 0, 0, 0.3);
+        }
+        
+        /* ========================================
+            NAVIGATION - STICKY NAVIGATION BAR
+           ======================================== */
+        nav {
+            overflow: hidden;
+            background: linear-gradient(90deg, #004494 0%, #003366 100%);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 12px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Navigation Menu List */
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        /* Navigation Links with Hover Animation */
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: block;
+            text-align: center;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #ffd700;
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Animated Underline on Hover */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #ffd700;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Active Link Indicator - Shows Current Section */
+        nav ul li a.active {
+            color: #ffd700;
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+            background-color: #ffd700;
+        }
+        
+        /* ========================================
+            MAIN CONTENT AREA
+           ======================================== */
+        main {
+            padding: 50px 0;
+        }
+        
+        /* Section Styling */
+        section {
+            background-color: white;
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #c00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Section Headings */
+        h2 {
+            color: #0056b3;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+        }
+        
+        h3 {
+            color: #c00;
+            margin: 20px 0 15px 0;
+            font-size: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+        
+        /* ========================================
+            ABOUT SECTION - INFO GRID
+           ======================================== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #0056b3;
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* ========================================
+            LOCATION SECTION - MAP AND DIRECTIONS
+           ======================================== */
+        .location-content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .map-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            margin: 20px 0;
+        }
+        
+        .map-container iframe {
+            display: block;
+            border: none;
+            width: 100%;
+            height: 450px;
+        }
+        
+        /* ========================================
+            ACADEMICS SECTION - PROGRAMS & STRANDS
+           ======================================== */
+        .academic-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .academic-level {
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+            transition: all 0.3s ease;
+        }
+        
+        .academic-level:hover {
+            border-color: #0056b3;
+            box-shadow: 0 8px 20px rgba(0, 86, 179, 0.15);
+        }
+        
+        /* Grade List Styling */
+        .grade-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .grade-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #dee2e6;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .grade-list li:before {
+            content: "✓";
+            color: #c00;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        /* Strands Container */
+        .strands-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+        
+        .strand-card {
+            background-color: #fff;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .strand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 86, 179, 0.2);
+            border-color: #ffd700;
+            background: linear-gradient(135deg, #fff9e6 0%, #fffaed 100%);
+        }
+        
+        .strand-name {
+            font-weight: 700;
+            color: #0056b3;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .strand-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* ========================================
+            CONTACT SECTION - CONTACT INFORMATION
+           ======================================== */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 22px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f1f2 100%);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid transparent;
+        }
+        
+        .contact-item:hover {
+            border-left-color: #0056b3;
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Contact Icon Circle */
+        .contact-icon {
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+        }
+        
+        /* Contact Details Text */
+        .contact-details h4 {
+            color: #0056b3;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        .contact-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+        
+        /* Contact Links (Facebook) */
+        .contact-details a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .contact-details a:hover {
+            color: #ffd700;
+            border-bottom-color: #ffd700;
+            text-decoration: underline;
+        }
+        
+        /* ========================================
+            ADMINISTRATION SECTION - STAFF
+           ======================================== */
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .admin-card {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #dee2e6;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .admin-card:hover {
+            border-color: #c00;
+            box-shadow: 0 10px 25px rgba(192, 0, 0, 0.15);
+            transform: translateY(-8px);
+        }
+        
+        .admin-card h4 {
+            color: #c00;
+            margin: 15px 0 8px 0;
+            font-size: 1.3rem;
+        }
+        
+        .admin-position {
+            color: #0056b3;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        
+        /* Principal Image */
+        .principal-image {
+            width: 100px;
+            height: 140px;
+            border: 3px solid #c00;
+            border-radius: 8px;
+            object-fit: cover;
+            margin: 0 auto 15px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* ========================================
+            FOOTER SECTION
+           ======================================== */
+        footer {
+            background: linear-gradient(135deg, #004494 0%, #002d5c 100%);
+            color: white;
+            padding: 50px 0 25px 0;
+            margin-top: 50px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h4 {
+            color: #ffd700;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .footer-section ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ffd700;
+            padding-left: 8px;
+        }
+        
+        .footer-section ul li i {
+            margin-right: 10px;
+            color: #ffd700;
+            width: 20px;
+        }
+        
+        .footer-section p {
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+        
+        /* Copyright Section */
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .copyright p {
+            margin: 5px 0;
+        }
+        
+        /* ========================================
+            EDITABLE AREAS HIGHLIGHTING
+           ======================================== */
+        .editable {
+            background-color: #fffde7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px dashed #ffd700;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .editable:hover {
+            background-color: #fff9c4;
+            border-color: #f57f17;
+        }
+        
+        /* ========================================
+            RESPONSIVE DESIGN - MOBILE & TABLET
+           ======================================== */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 0;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .school-brand {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .school-name {
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            nav ul li {
+                margin: 3px 0;
+            }
+            
+            section {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .map-container iframe {
+                height: 300px;
+            }
+            
+            main {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER SECTION ===== -->
+    <header>
+        <div class="container header-content">
+            <!-- School Logo and Branding -->
+            <div class="school-brand">
+                <img src="../images/snhs_logo.jpg" alt="Sulop National High School Logo" class="school-logo">
+                <div>
+                    <h1 class="school-name">Sulop National High School</h1>
+                    <p class="school-tagline">A DepEd Public Secondary School</p>
+                </div>
+            </div>
+            <!-- DepEd Official Badge -->
+            <div class="deped-badge">DEPED PUBLIC SCHOOL</div>
+        </div>
+    </header>
+    
+    <!-- ===== NAVIGATION BAR (STICKY) ===== -->
+    <nav>
+        <div class="container">
+            <ul>
+                <!-- Navigation Links with smooth scroll to sections -->
+                <li><a href="#about">About Our School</a></li>
+                <li><a href="#academics">Academic Programs</a></li>
+                <li><a href="#administration">School Administration</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- ===== MAIN CONTENT AREA ===== -->
+    <main class="container">
+        
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about">
+            <h2>About Our School</h2>
+            <p>Sulop National High School is a public secondary educational institution committed to providing quality education to the youth of Sulop and neighboring communities.</p>
+            
+            <div class="info-grid">
+                <!-- School Information Card -->
+                <div class="info-card">
+                    <h3>School Information</h3>
+                    <p><strong>School Type:</strong> <span class="editable">Public Secondary School under DepEd</span></p>
+                    <p><strong>School ID:</strong> <span class="editable">304297</span></p>
+                    <p><strong>Established:</strong> <span class="editable">1966</span></p>
+                    <p><strong>School Head:</strong> <span class="editable">Jerome G. Samson</span></p>
+                </div>
+                
+                <!-- Mission and Vision Card -->
+                <div class="info-card">
+                    <h3>Mission & Vision</h3>
+                    <p><strong>Vision:</strong> Sulop National High School produces quality education in a culture of excellence demonstrated by the strength of competent teachers, cooperative parents, world-class instructional leaders with adequate resources that provide viability of purpose in a nurturing environment.</p>
+                    <p><strong>Mission:</strong> The school exists to provide students with functional curriculum, adequate resources, quality instructions by the competent and dedicated teachers and establishes a strong partnership with the community to produce higher learning outcome.</p>
+                    <p><strong>Core Values:</strong> Maka-Diyos, Makatao, Makakalikasan, Makabansa</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== LOCATION SECTION ===== -->
+        <section id="location">
+            <h2>School Location</h2>
+            <div class="location-content">
+                <p><strong>Complete Address:</strong> CII Drive, Poblacion, Sulop, Davao del Sur, Philippines</p>
+                
+                <!-- Google Map Embed -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.4629967257945!2d125.34106377389105!3d6.607227293142332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f80c5c17f6c741%3A0x9e4cf4cf8ba3106f!2sSulop%20National%20High%20School!5e0!3m2!1sen!2sph!4v1700000000000"
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Sulop National High School Location">
+                    </iframe>
+                </div>
+                
+                <!-- Directions Information -->
+                <div style="margin-top: 20px; background-color: #f0f8ff; padding: 20px; border-radius: 6px; border-left: 5px solid #0056b3;">
+                    <p><strong><i class="fas fa-directions"></i> How to get to Sulop National High School:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>From Davao City:</strong> Take a bus bound for Digos City and alight at Sulop terminal</li>
+                        <li><strong>From Digos City:</strong> Take a bus or van going to Sulop (approximately 1 hour travel time)</li>
+                        <li><strong>Within Sulop:</strong> From the town proper, take a tricycle to the school (5-10 minute ride)</li>
+                        <li><strong>Private Vehicle:</strong> Ample parking space is available within the school compound</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                        <i class="fas fa-map-marker-alt"></i> Coordinates: 6.6072273° N, 125.3436386° E
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== ACADEMICS SECTION ===== -->
+        <section id="academics">
+            <h2>Academic Programs</h2>
+            <p>Sulop National High School offers a comprehensive secondary education program aligned with the K-12 curriculum of the Department of Education.</p>
+            
+            <div class="academic-levels">
+                <!-- Junior High School Program -->
+                <div class="academic-level">
+                    <h3>Junior High School</h3>
+                    <p>Grades 7 to 10 following the enhanced basic education curriculum.</p>
+                    <ul class="grade-list">
+                        <li>Grade 7</li>
+                        <li>Grade 8</li>
+                        <li>Grade 9</li>
+                        <li>Grade 10</li>
+                    </ul>
+                    <p><strong>Curriculum:</strong> Core subjects with exploratory Technology and Livelihood Education (TLE) courses.</p>
+                </div>
+                
+                <!-- Senior High School Program -->
+                <div class="academic-level">
+                    <h3>Senior High School</h3>
+                    <p>Grades 11 and 12 with specialized tracks and strands.</p>
+                    <ul class="grade-list">
+                        <li>Grade 11</li>
+                        <li>Grade 12</li>
+                    </ul>
+                    <p><strong>Tracks Offered:</strong></p>
+                    
+                    <!-- SHS Strands/Specializations -->
+                    <div class="strands-container">
+                        <div class="strand-card">
+                            <div class="strand-name">STEM</div>
+                            <div class="strand-desc">Science, Technology, Engineering, and Mathematics</div>
+                        </div>
+                        <div class="strand-card">
+                            <div class="strand-name">HUMSS</div>
+                            <div class="strand-desc">Humanities and Social Sciences</div>
+                        </div>
+                        <div class="strand-card">
+                            <div class="strand-name">ABM</div>
+                            <div class="strand-desc">Accountancy, Business, and Management</div>
+                        </div>
+                        <div class="strand-card">
+                            <div class="strand-name">TVL Track</div>
+                            <div class="strand-desc">Technical-Vocational-Livelihood</div>
+                        </div>
+                    </div>
+                    <p class="editable" style="margin-top: 20px; font-style: italic; color: #555;">Within the TVL strand, there are specializations such as ICT, Bartending, Cookery, Housekeeping, and Beauty Care.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== ADMINISTRATION SECTION ===== -->
+        <section id="administration">
+            <h2>School Administration</h2>
+            <p>Meet the dedicated team leading Sulop National High School towards educational excellence.</p>
+            
+            <div class="admin-grid">
+                <!-- Principal Card -->
+                <div class="admin-card">
+                    <img src="../images/principal_image_.png" alt="School Principal" class="principal-image">
+                    <h4>Jerome G. Samson</h4>
+                    <p class="admin-position">School Principal</p>
+                    <p><small>Principal of Sulop National High School</small></p>
+                </div>
+                
+                <!-- Faculty & Staff Card -->
+                <div class="admin-card">
+                    <i class="fas fa-users fa-4x" style="color: #0056b3; margin-bottom: 15px;"></i>
+                    <h4>Faculty & Staff</h4>
+                    <p class="admin-position">Dedicated Educators</p>
+                    <p><small>Qualified teachers committed to student development</small></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For inquiries, concerns, or additional information about Sulop National High School, please reach out through the following channels:</p>
+            
+            <div class="contact-info">
+                <!-- Phone Contact Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone Number</h4>
+                        <p><span class="editable">0917 115 7352</span></p>
+                        <p><small>Office hours: 7:00 AM - 5:00 PM, Monday to Friday</small></p>
+                    </div>
+                </div>
+                
+                <!-- Email Contact Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Address</h4>
+                        <p><span class="editable">sulop.nhs@deped.gov.ph</span></p>
+                        <p><small>For official correspondence and inquiries</small></p>
+                    </div>
+                </div>
+                
+                <!-- Office Hours Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Office Hours</h4>
+                        <p>7:30 AM - 4:30 PM</p>
+                        <p>Monday to Friday</p>
+                        <p><small>Closed on weekends and holidays</small></p>
+                    </div>
+                </div>
+                
+                <!-- Facebook Links Item -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Follow Us on Facebook</h4>
+                        <p><a href="https://www.facebook.com/profile.php?id=100064202107054" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Main Campus</a></p>
+                        <p><a href="https://www.facebook.com/profile.php?id=61560308523924" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Senior High</a></p>
+                        <p><small>Connect with us on social media</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Logo and Description -->
+                <div class="footer-section">
+                    <img src="../images/snhs_logo.jpg" alt="Sulop National High School Logo" class="footer-school-logo">
+                    <h4>Sulop National High School</h4>
+                    <p>A DepEd Public Secondary School committed to providing quality education to the youth.</p>
+                </div>
+                
+                <!-- Quick Navigation Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Our School</a></li>
+                        <li><a href="#academics">Academic Programs</a></li>
+                        <li><a href="#administration">School Administration</a></li>
+                        <li><a href="#contact">Contact Information</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> CII Drive, Poblacion, Sulop, Davao del Sur</li>
+                        <li><i class="fas fa-phone"></i> 0917 115 7352</li>
+                        <li><i class="fas fa-envelope"></i> sulop.nhs@deped.gov.ph</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright Information -->
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Sulop National High School. All Rights Reserved.</p>
+                <p>This is an official school website for informational purposes.</p>
+                <p><small>Created by <strong>Harvey Gel B. Cimagala</strong>, Grade 12 - Olivo | Sulop National High School</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== EXTERNAL JAVASCRIPT FILE ===== -->
+    <script src="School_info_snhs.js"></script>
+    
+    <!-- ===== INLINE SCRIPTS (BACKUP) ===== -->
+    <script>
+        /* Fallback script - main functionality is in School_info_snhs.js */
+        /* Smooth scrolling for navigation links */
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60, // Adjusted offset for sticky nav
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
