@@ -445,6 +445,8 @@
             border: 2px solid #dee2e6;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: visible;
         }
         
         .admin-card:hover {
@@ -476,6 +478,130 @@
             margin: 0 auto 15px auto;
             display: block;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* ========================================
+            HOVER POPUP NOTE FOR FACULTY & STAFF
+           ======================================== */
+        .popup-trigger {
+            position: relative;
+        }
+        
+        .faculty-popup {
+            position: absolute;
+            top: -180px; /* Positioned above the card */
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 320px;
+            background: linear-gradient(135deg, #fff9e6 0%, #fff5cc 100%);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #ffd700;
+            text-align: center;
+            pointer-events: none;
+        }
+        
+        .popup-trigger:hover .faculty-popup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(1);
+            pointer-events: auto;
+        }
+        
+        .popup-header {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .popup-title {
+            font-size: 1.3rem;
+            color: #0056b3;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .popup-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #0056b3 0%, #ffd700 100%);
+            border-radius: 3px;
+        }
+        
+        .popup-content {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .popup-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .popup-link {
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+        }
+        
+        .popup-link:hover {
+            background: linear-gradient(135deg, #004494 0%, #002d5c 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
+        }
+        
+        .popup-link i {
+            color: #ffd700;
+        }
+        
+        .popup-arrow {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid #ffd700;
+        }
+        
+        /* Add subtle glow effect to popup title */
+        @keyframes subtleGlow {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 86, 179, 0.1);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(0, 86, 179, 0.3);
+            }
+        }
+        
+        .popup-title {
+            animation: subtleGlow 2s infinite alternate;
         }
         
         /* ========================================
@@ -620,6 +746,29 @@
             
             main {
                 padding: 30px 0;
+            }
+            
+            /* Adjust popup for mobile */
+            .faculty-popup {
+                width: 280px;
+                padding: 20px;
+                top: -160px; /* Adjusted for mobile */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .faculty-popup {
+                width: 250px;
+                padding: 15px;
+                top: -150px; /* Further adjusted for small mobile */
+            }
+            
+            .popup-title {
+                font-size: 1.1rem;
+            }
+            
+            .popup-content {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -785,12 +934,31 @@
                     <p><small>Principal of Sulop National High School</small></p>
                 </div>
                 
-                <!-- Faculty & Staff Card -->
-                <div class="admin-card">
+                <!-- Faculty & Staff Card with Hover Popup -->
+                <div class="admin-card popup-trigger">
                     <i class="fas fa-users fa-4x" style="color: #0056b3; margin-bottom: 15px;"></i>
                     <h4>Faculty & Staff</h4>
                     <p class="admin-position">Dedicated Educators</p>
                     <p><small>Qualified teachers committed to student development</small></p>
+                    
+                    <!-- Hover Popup Note -->
+                    <div class="faculty-popup">
+                        <div class="popup-header">
+                            <h4 class="popup-title">Looking for More Details?</h4>
+                        </div>
+                        <div class="popup-content">
+                            <p>For comprehensive information about our faculty members, subject teachers, and staff profiles, please visit our official Facebook pages where you can find the latest updates, announcements, and contact information.</p>
+                        </div>
+                        <div class="popup-links">
+                            <a href="https://www.facebook.com/profile.php?id=100064202107054" target="_blank" rel="noopener noreferrer" class="popup-link">
+                                <i class="fab fa-facebook"></i> Main Campus Facebook Page
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61560308523924" target="_blank" rel="noopener noreferrer" class="popup-link">
+                                <i class="fab fa-facebook"></i> Senior High Facebook Page
+                            </a>
+                        </div>
+                        <div class="popup-arrow"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -920,12 +1088,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
