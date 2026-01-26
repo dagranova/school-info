@@ -60,4 +60,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== UPDATE ACTIVE NAV ON SCROLL =====
     window.addEventListener('scroll', updateActiveNavLink);
+    
+    // ===== ENHANCED POPUP FUNCTIONALITY =====
+    const popupTrigger = document.querySelector('.popup-trigger');
+    
+    if (popupTrigger) {
+        // Add subtle pulse animation to the faculty card to indicate hover functionality
+        popupTrigger.style.position = 'relative';
+        
+        // Add a subtle glow effect to the card on page load to draw attention
+        setTimeout(() => {
+            popupTrigger.style.boxShadow = '0 4px 20px rgba(0, 86, 179, 0.2)';
+            setTimeout(() => {
+                popupTrigger.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.05)';
+            }, 1000);
+        }, 1500);
+        
+        // Touch support for mobile devices
+        let touchTimer;
+        popupTrigger.addEventListener('touchstart', function(e) {
+            touchTimer = setTimeout(() => {
+                this.classList.add('force-show-popup');
+            }, 500); // Long press to show
+        });
+        
+        popupTrigger.addEventListener('touchend', function(e) {
+            clearTimeout(touchTimer);
+            this.classList.remove('force-show-popup');
+        });
+    }
 });
