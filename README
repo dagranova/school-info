@@ -1,240 +1,348 @@
-Sulop National High School - School Project Website
-Project Overview
+# Sulop National High School - School Project Website
 
-The Sulop National High School Website is a school project output developed as part of the CSS (Cascading Style Sheets) subject curriculum. This web application serves as a demonstration of modern web design principles, responsive layout techniques, and front-end development skills acquired during the course.
+This document provides a comprehensive overview of the Sulop National High School website project, including its educational context, technical implementation, development process, and detailed guides for understanding and modifying the project.
 
-Important Note: This website is an academic project created for educational purposes and is not an official website of Sulop National High School. It does not represent the official communications or policies of the school administration.
-Educational Context
-Course Information:
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Educational Context](#educational-context)
+3. [Technical Requirements](#technical-requirements)
+4. [Project Components](#project-components)
+5. [Development Process](#development-process)
+6. [Educational Value](#educational-value)
+7. [Usage and Disclaimer](#usage-and-disclaimer)
+8. [Future Development](#future-development)
+9. [Grading Criteria](#grading-criteria)
+10. [Acknowledgments](#acknowledgments)
 
-    Subject: CSS (Cascading Style Sheets)
+## Project Overview
 
-    Academic Level: Grade 12
+**Function:** Serves as a comprehensive school website demonstrating modern web design principles and CSS techniques.
 
-    Program: Senior High School
+**What it does:**
+- Showcases Sulop National High School information and programs
+- Demonstrates responsive web design across devices
+- Implements interactive elements and smooth navigation
+- Provides a professional presentation of school data
 
-    Strand: Information and Communications Technology (ICT)
+**Important Note:** This website is an academic project created for educational purposes and is not an official website of Sulop National High School. It does not represent the official communications or policies of the school administration.
 
-    Developer: Harvey Gel B. Cimagala, Grade 12 - Olivo
+**How to modify:**
 
-    Institution: Sulop National High School
+#### To Change School Information:
+1. Update content in `index.html` within the respective sections
+2. Modify school name, address, and contact details
+3. Replace logo images in the `images/` folder
+4. Update map embed URL for correct location
 
-Learning Objectives Demonstrated:
+#### To Add New Content Sections:
+1. Create new `<section>` element in HTML with unique `id`
+2. Add corresponding navigation link in `<nav>` element
+3. Style the new section using existing CSS patterns
+4. Ensure responsive design works on all breakpoints
 
-    HTML5 Semantic Structure: Proper use of semantic elements and document structure
+#### To Customize Branding:
+- Change color scheme in CSS variables (if implemented) or direct color values
+- Replace school logo and branding elements
+- Modify typography and spacing to match new design requirements
 
-    CSS Layout Techniques: Implementation of Flexbox and CSS Grid systems
+## Educational Context
 
-    Responsive Web Design: Creation of mobile-first, adaptive layouts
+**Function:** Provides the academic framework and learning objectives for the CSS course project.
 
-    CSS Animations and Transitions: Application of interactive visual effects
+**Course Information:**
+- **Subject:** CSS (Cascading Style Sheets)
+- **Academic Level:** Grade 12
+- **Program:** Senior High School
+- **Strand:** Information and Communications Technology (ICT)
+- **Developer:** Harvey Gel B. Cimagala, Grade 12 - Olivo
+- **Institution:** Sulop National High School
 
-    Typography and Color Theory: Implementation of design principles
+**Learning Objectives Demonstrated:**
+- HTML5 Semantic Structure: Proper use of semantic elements and document structure
+- CSS Layout Techniques: Implementation of Flexbox and CSS Grid systems
+- Responsive Web Design: Creation of mobile-first, adaptive layouts
+- CSS Animations and Transitions: Application of interactive visual effects
+- Typography and Color Theory: Implementation of design principles
+- Form Styling and UI Components: Creation of user interface elements
+- Cross-Browser Compatibility: Ensuring consistent display across platforms
 
-    Form Styling and UI Components: Creation of user interface elements
+**How to modify:**
 
-    Cross-Browser Compatibility: Ensuring consistent display across platforms
+#### To Update Course Information:
+1. Edit the course details in this README section
+2. Update developer name and academic information
+3. Modify learning objectives to reflect current curriculum
 
-Project Specifications
-Technical Requirements Met:
+#### To Change Academic Context:
+- Update grade level and strand information
+- Modify institution details if transferring to another school
+- Adjust learning objectives based on course requirements
 
-    HTML5 Compliance: Valid semantic markup structure
+## Technical Requirements
 
-    CSS3 Features: Advanced styling techniques and modern properties
+**Function:** Defines the technical standards and specifications met by the project.
 
-    Responsive Design: Three breakpoint system (mobile, tablet, desktop)
+**Requirements Met:**
+- **HTML5 Compliance:** Valid semantic markup structure
+- **CSS3 Features:** Advanced styling techniques and modern properties
+- **Responsive Design:** Three breakpoint system (mobile, tablet, desktop)
+- **Interactive Elements:** JavaScript-enhanced user interactions
+- **Accessibility Standards:** WCAG 2.0 Level AA compliance
+- **Performance Optimization:** Efficient CSS and JavaScript implementation
 
-    Interactive Elements: JavaScript-enhanced user interactions
+**How to modify:**
 
-    Accessibility Standards: WCAG 2.0 Level AA compliance
+#### To Upgrade Technical Standards:
+1. Update HTML doctype and semantic elements to latest standards
+2. Implement CSS custom properties for better maintainability
+3. Add more responsive breakpoints for better device coverage
+4. Enhance accessibility with ARIA labels and keyboard navigation
 
-    Performance Optimization: Efficient CSS and JavaScript implementation
+#### To Add New Technical Features:
+- Integrate additional JavaScript libraries or frameworks
+- Implement CSS preprocessors like Sass or Less
+- Add build tools like Webpack or Gulp for optimization
+- Incorporate testing frameworks for quality assurance
 
-Project Components:
+## Project Components
 
-    Documentation: This README file detailing the project scope
+**Function:** Lists all deliverables and components included in the project submission.
 
-    Source Code: HTML, CSS, and JavaScript implementation
+**Components:**
+- **Documentation:** This README file detailing the project scope and CODE_FUNCTIONS_README.md providing detailed code function explanations and modification guides
+- **Source Code:** HTML, CSS, and JavaScript implementation
+- **Design Mockups:** Original design concept and wireframes
+- **Testing Documentation:** Cross-browser compatibility testing results
 
-    Design Mockups: Original design concept and wireframes
+**File Structure:**
+```
+/
+├── index.html              # Main HTML file
+├── README                  # Project overview (this file)
+├── CODE_FUNCTIONS_README.md # Code documentation and guides
+├── School_info_snhs.js     # JavaScript functionality
+└── images/                 # Image assets
+    ├── snhs-logo.jpg       # School logo
+    └── principal-image.png # Principal photo
+```
 
-    Testing Documentation: Cross-browser compatibility testing results
+**How to modify:**
 
-Development Process
-Phase 1: Planning and Design
+#### To Add New Components:
+1. Create new files in appropriate directories
+2. Update this documentation section
+3. Ensure new components are referenced in relevant sections
 
-    Requirements analysis and specification
+#### To Restructure Files:
+- Move files to subdirectories for better organization
+- Update all references in HTML, CSS, and documentation
+- Test all links and paths after restructuring
 
-    Wireframe creation and layout planning
+## Development Process
 
-    Color scheme selection based on DepEd branding
+**Function:** Documents the systematic approach used to develop the website project.
 
-    Content organization and information architecture
+### Phase 1: Planning and Design
+**Activities:**
+- Requirements analysis and specification
+- Wireframe creation and layout planning
+- Color scheme selection based on DepEd branding
+- Content organization and information architecture
 
-Phase 2: Implementation
+### Phase 2: Implementation
+**Activities:**
+- HTML5 semantic structure development
+- CSS styling implementation with progressive enhancement
+- JavaScript functionality integration
+- Responsive design implementation
 
-    HTML5 semantic structure development
+### Phase 3: Testing and Refinement
+**Activities:**
+- Cross-browser compatibility testing
+- Mobile device testing and optimization
+- Performance evaluation and optimization
+- Accessibility testing and improvements
 
-    CSS styling implementation with progressive enhancement
+**How to modify:**
 
-    JavaScript functionality integration
+#### To Extend Development Phases:
+1. Add new phases like deployment or maintenance
+2. Include additional testing phases (unit testing, integration testing)
+3. Add version control and collaboration phases
 
-    Responsive design implementation
+#### To Document Changes:
+- Update phase activities based on actual development process
+- Add timelines and milestones
+- Include challenges faced and solutions implemented
 
-Phase 3: Testing and Refinement
+## Educational Value
 
-    Cross-browser compatibility testing
+**Function:** Demonstrates the learning outcomes and CSS concepts applied in the project.
 
-    Mobile device testing and optimization
+**CSS Concepts Demonstrated:**
+- **Box Model:** Proper use of margins, padding, and borders
+- **Positioning:** Static, relative, absolute, fixed, and sticky positioning
+- **Flexbox Layout:** One-dimensional layout system implementation
+- **CSS Grid:** Two-dimensional grid system implementation
+- **Media Queries:** Responsive design breakpoints
+- **CSS Variables:** Custom properties for consistent styling
+- **Transitions and Animations:** Smooth interactive effects
+- **Pseudo-classes and Pseudo-elements:** Advanced selector usage
 
-    Performance evaluation and optimization
+**Project-Based Learning Outcomes:**
+- Problem-Solving Skills: Addressing design and implementation challenges
+- Technical Documentation: Creating comprehensive project documentation
+- Version Control Awareness: Understanding of code management principles
+- Collaborative Development: Potential for team-based enhancements
+- Presentation Skills: Demonstrating technical solutions effectively
 
-    Accessibility testing and improvements
+**How to modify:**
 
-Educational Value
-CSS Concepts Demonstrated:
+#### To Add New Learning Outcomes:
+1. Identify additional skills demonstrated
+2. Document specific examples from the code
+3. Link outcomes to curriculum standards
 
-    Box Model: Proper use of margins, padding, and borders
+#### To Update CSS Concepts:
+- Add newly implemented CSS features
+- Provide code examples for each concept
+- Explain practical applications in the project
 
-    Positioning: Static, relative, absolute, fixed, and sticky positioning
+## Usage and Disclaimer
 
-    Flexbox Layout: One-dimensional layout system implementation
+**Function:** Defines appropriate use cases and legal considerations for the project.
 
-    CSS Grid: Two-dimensional grid system implementation
-
-    Media Queries: Responsive design breakpoints
-
-    CSS Variables: Custom properties for consistent styling
-
-    Transitions and Animations: Smooth interactive effects
-
-    Pseudo-classes and Pseudo-elements: Advanced selector usage
-
-Project-Based Learning Outcomes:
-
-    Problem-Solving Skills: Addressing design and implementation challenges
-
-    Technical Documentation: Creating comprehensive project documentation
-
-    Version Control Awareness: Understanding of code management principles
-
-    Collaborative Development: Potential for team-based enhancements
-
-    Presentation Skills: Demonstrating technical solutions effectively
-
-Disclaimer and Usage
-Academic Project Status:
-
+**Academic Project Status:**
 This website is strictly an educational project created to fulfill course requirements in the CSS subject. It should not be considered an official representation of Sulop National High School. Any information presented may be sample content or placeholder data for demonstration purposes.
-Intellectual Property:
 
-    Educational Materials: This project demonstrates learned concepts and is not for commercial use
+**Intellectual Property:**
+- Educational Materials: This project demonstrates learned concepts and is not for commercial use
+- School Branding: DepEd branding and school identity elements are used with educational intent
+- Third-Party Resources: External resources (icons, fonts) are used in accordance with their licenses
 
-    School Branding: DepEd branding and school identity elements are used with educational intent
+**Appropriate Use:**
+- Educational Reference: May be used as a learning resource for CSS students
+- Portfolio Demonstration: May be included in student portfolios with proper context
+- Academic Assessment: Subject to evaluation by course instructors
+- Non-Commercial: Not intended for commercial deployment or official school use
 
-    Third-Party Resources: External resources (icons, fonts) are used in accordance with their licenses
+**How to modify:**
 
-Appropriate Use:
+#### To Update Usage Guidelines:
+1. Add new permitted use cases
+2. Include licensing information for assets
+3. Specify attribution requirements
 
-    Educational Reference: May be used as a learning resource for CSS students
+#### To Change Project Status:
+- Update from academic to commercial project
+- Modify disclaimer language accordingly
+- Add licensing terms if applicable
 
-    Portfolio Demonstration: May be included in student portfolios with proper context
+## Future Development
 
-    Academic Assessment: Subject to evaluation by course instructors
+**Function:** Identifies potential enhancements and expansion opportunities.
 
-    Non-Commercial: Not intended for commercial deployment or official school use
+**Educational Extensions:**
+- JavaScript Integration: Adding more interactive features
+- Backend Development: Connecting to databases or APIs
+- Content Management: Implementing a CMS for dynamic content
+- Advanced Animations: Adding more complex CSS animations
+- Progressive Web App: Converting to PWA standards
 
-Future Development Opportunities
-Educational Extensions:
+**Academic Enhancements:**
+- Accessibility audit and improvements
+- Performance optimization techniques
+- Security best practices implementation
+- SEO optimization strategies
 
-    JavaScript Integration: Adding more interactive features
+**How to modify:**
 
-    Backend Development: Connecting to databases or APIs
+#### To Plan New Features:
+1. Prioritize enhancements based on educational value
+2. Create implementation roadmap
+3. Identify required skills and resources
 
-    Content Management: Implementing a CMS for dynamic content
+#### To Track Development:
+- Create issue tracking for future enhancements
+- Set up project milestones
+- Document dependencies and prerequisites
 
-    Advanced Animations: Adding more complex CSS animations
+## Grading Criteria
 
-    Progressive Web App: Converting to PWA standards
+**Function:** Defines the evaluation standards for the project assessment.
 
-Academic Enhancements:
+**Technical Implementation (60%):**
+- Code organization and readability
+- CSS specificity and efficiency
+- Responsive design implementation
+- Cross-browser compatibility
+- Error-free execution
 
-    Accessibility audit and improvements
+**Design and Usability (30%):**
+- Visual appeal and consistency
+- User interface intuitiveness
+- Navigation effectiveness
+- Typography and spacing
+- Color scheme appropriateness
 
-    Performance optimization techniques
+**Documentation (10%):**
+- Code commenting and documentation
+- Project documentation completeness
+- Development process explanation
+- Testing and validation reporting
 
-    Security best practices implementation
+**How to modify:**
 
-    SEO optimization strategies
+#### To Adjust Grading Criteria:
+1. Update percentage weights based on course requirements
+2. Add new evaluation categories
+3. Modify criteria descriptions for clarity
 
-Grading Criteria Addressed
-Technical Implementation (60%):
+#### To Improve Scoring Areas:
+- Identify weak areas from feedback
+- Implement improvements before submission
+- Document changes made for better grades
 
-    Code organization and readability
+## Acknowledgments
 
-    CSS specificity and efficiency
+**Function:** Recognizes contributors, resources, and support received for the project.
 
-    Responsive design implementation
+**Educational Support:**
+- CSS Course Instructor: Guidance on technical requirements and best practices
+- Sulop National High School: Providing the educational context and approval for the project
+- Department of Education (DepEd): Curriculum framework and educational standards
 
-    Cross-browser compatibility
+**Technical Resources:**
+- Font Awesome: Icon library used for visual elements
+- Google Fonts: Typography resources
+- MDN Web Docs: Technical reference and documentation
+- W3Schools: Educational tutorials and examples
 
-    Error-free execution
+**Development Tools:**
+- Visual Studio Code: Primary code editor
+- Git: Version control system
+- Browser Developer Tools: Testing and debugging tools
+- Responsive Design Testing Tools: Multi-device simulation
 
-Design and Usability (30%):
+**Project Details:**
+- **Submission Date:** December 2023
+- **Academic Term:** First Semester, School Year 2023-2024
+- **Course:** CSS (Cascading Style Sheets)
+- **Developer:** Harvey Gel B. Cimagala
+- **Status:** Completed for Academic Evaluation
 
-    Visual appeal and consistency
+**How to modify:**
 
-    User interface intuitiveness
+#### To Add Acknowledgments:
+1. Include new contributors or supporters
+2. Add additional resources used
+3. Recognize peer reviewers or mentors
 
-    Navigation effectiveness
+#### To Update Project Details:
+- Modify submission date and academic term
+- Update developer information
+- Change project status as needed
 
-    Typography and spacing
+---
 
-    Color scheme appropriateness
-
-Documentation (10%):
-
-    Code commenting and documentation
-
-    Project documentation completeness
-
-    Development process explanation
-
-    Testing and validation reporting
-
-Acknowledgments
-Educational Support:
-
-    CSS Course Instructor: Guidance on technical requirements and best practices
-
-    Sulop National High School: Providing the educational context and approval for the project
-
-    Department of Education (DepEd): Curriculum framework and educational standards
-
-Technical Resources:
-
-    Font Awesome: Icon library used for visual elements
-
-    Google Fonts: Typography resources
-
-    MDN Web Docs: Technical reference and documentation
-
-    W3Schools: Educational tutorials and examples
-
-Development Tools:
-
-    Visual Studio Code: Primary code editor
-
-    Git: Version control system
-
-    Browser Developer Tools: Testing and debugging tools
-
-    Responsive Design Testing Tools: Multi-device simulation
-
-Project Submission Date: December 2023
-Academic Term: First Semester, School Year 2023-2024
-Course: CSS (Cascading Style Sheets)
-Developer: Harvey Gel B. Cimagala
-Status: Completed for Academic Evaluation
-
-This project represents the culmination of CSS learning objectives and demonstrates proficiency in modern web design techniques as required by the Senior High School curriculum.
+**Note:** This project represents the culmination of CSS learning objectives and demonstrates proficiency in modern web design techniques as required by the Senior High School curriculum. For detailed code explanations and modification guides, refer to CODE_FUNCTIONS_README.md.
