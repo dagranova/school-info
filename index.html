@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sulop National High School</title>
+    <title>Sulop National High School - Senior High</title>
     <!-- Font Awesome Icons Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -20,7 +20,7 @@
         }
         
         body {
-            background-color: #f8f9fa;
+            background-color: #fffef5;
             color: #333;
             line-height: 1.6;
         }
@@ -36,8 +36,8 @@
             HEADER SECTION - SCHOOL BRANDING
            ======================================== */
         header {
-            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
-            color: white;
+            background: linear-gradient(135deg, #4CAF50 0%, #FFEB3B 100%);
+            color: #333;
             padding: 25px 0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
@@ -58,7 +58,7 @@
         .school-logo {
             width: 100px;
             height: 100px;
-            border: 4px solid #ffd700;
+            border: 4px solid #FF9800;
             border-radius: 8px;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -72,8 +72,8 @@
         .footer-school-logo {
             width: 80px;
             height: 80px;
-            border: 2px solid #ffd700;
-            border-radius: 6px;
+            border: 2px solid #FF9800;
+            border-radius: 6px !important;
             object-fit: cover;
             margin-bottom: 15px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -82,28 +82,29 @@
         .school-name {
             font-size: 2rem;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
             letter-spacing: 0.5px;
+            color: #333;
         }
         
         .school-tagline {
             font-size: 1rem;
-            font-weight: 300;
-            opacity: 0.95;
+            font-weight: 500;
+            opacity: 0.9;
             margin-top: 5px;
             letter-spacing: 0.3px;
+            color: #333;
         }
         
-        /* DepEd Badge */
-        .deped-badge {
-            background: linear-gradient(135deg, #c00 0%, #990000 100%);
+        .senior-high-badge {
+            background: linear-gradient(135deg, #E91E63 0%, #9C27B0 100%);
             color: white;
             padding: 8px 20px;
-            border-radius: 25px;
+            border-radius: 35px;
             font-size: 0.85rem;
             font-weight: 700;
             letter-spacing: 1.5px;
-            box-shadow: 0 4px 10px rgba(192, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
         }
         
         /* ========================================
@@ -111,7 +112,7 @@
            ======================================== */
         nav {
             overflow: hidden;
-            background: linear-gradient(90deg, #004494 0%, #003366 100%);
+            background: linear-gradient(90deg, #4CAF50 0%, #FFEB3B 100%);
             position: sticky;
             top: 0;
             width: 100%;
@@ -136,7 +137,7 @@
         
         /* Navigation Links with Hover Animation */
         nav ul li a {
-            color: white;
+            color: #333;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
@@ -149,8 +150,8 @@
         }
         
         nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: #ffd700;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #9C27B0;
             transform: scale(1.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
@@ -163,7 +164,7 @@
             left: 50%;
             width: 0;
             height: 3px;
-            background-color: #ffd700;
+            background-color: #9C27B0;
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
@@ -174,13 +175,13 @@
         
         /* Active Link Indicator - Shows Current Section */
         nav ul li a.active {
-            color: #ffd700;
-            background-color: rgba(255, 215, 0, 0.1);
+            color: #9C27B0;
+            background-color: rgba(156, 39, 176, 0.1);
         }
         
         nav ul li a.active::after {
             width: 100%;
-            background-color: #ffd700;
+            background-color: #9C27B0;
         }
         
         /* ========================================
@@ -196,28 +197,28 @@
             margin-bottom: 40px;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-            border-left: 6px solid #c00;
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.08);
+            border-left: 6px solid #FF9800;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.15);
         }
         
         /* Section Headings */
         h2 {
-            color: #0056b3;
-            border-bottom: 3px solid #ffd700;
+            color: #FF9800;
+            border-bottom: 3px solid #FFD700;
             padding-bottom: 15px;
             margin-bottom: 25px;
             font-size: 2rem;
             letter-spacing: 0.5px;
         }
-        
+
         h3 {
-            color: #c00;
+            color: #E91E63;
             margin: 20px 0 15px 0;
             font-size: 1.5rem;
             letter-spacing: 0.3px;
@@ -234,11 +235,11 @@
         }
         
         .info-card {
-            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
             padding: 25px;
             border-radius: 8px;
-            border-left: 5px solid #0056b3;
-            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1);
+            border-left: 5px solid #E91E63;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.15);
             transition: transform 0.3s ease;
         }
         
@@ -259,7 +260,7 @@
             width: 100%;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.15);
             margin: 20px 0;
         }
         
@@ -271,7 +272,7 @@
         }
         
         /* ========================================
-            ACADEMICS SECTION - PROGRAMS & STRANDS
+            ACADEMICS SECTION - SENIOR HIGH PROGRAMS
            ======================================== */
         .academic-levels {
             display: grid;
@@ -281,16 +282,16 @@
         }
         
         .academic-level {
-            background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
             padding: 25px;
             border-radius: 8px;
-            border: 2px solid #dee2e6;
+            border: 2px solid #FFCC80;
             transition: all 0.3s ease;
         }
         
         .academic-level:hover {
-            border-color: #0056b3;
-            box-shadow: 0 8px 20px rgba(0, 86, 179, 0.15);
+            border-color: #9C27B0;
+            box-shadow: 0 8px 20px rgba(156, 39, 176, 0.15);
         }
         
         /* Grade List Styling */
@@ -301,7 +302,7 @@
         
         .grade-list li {
             padding: 10px 0;
-            border-bottom: 1px dashed #dee2e6;
+            border-bottom: 1px dashed #FFCC80;
             display: flex;
             align-items: center;
             font-weight: 500;
@@ -309,7 +310,7 @@
         
         .grade-list li:before {
             content: "✓";
-            color: #c00;
+            color: #E91E63;
             font-weight: bold;
             margin-right: 12px;
             font-size: 1.2rem;
@@ -323,26 +324,29 @@
             margin-top: 20px;
         }
         
+        /* Strand Card with Popup Trigger */
         .strand-card {
             background-color: #fff;
-            border: 2px solid #0056b3;
+            border: 2px solid #4CAF50;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.1);
+            position: relative;
+            cursor: pointer;
         }
         
         .strand-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 86, 179, 0.2);
-            border-color: #ffd700;
-            background: linear-gradient(135deg, #fff9e6 0%, #fffaed 100%);
+            box-shadow: 0 10px 25px rgba(156, 39, 176, 0.2);
+            border-color: #9C27B0;
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
         }
         
         .strand-name {
             font-weight: 700;
-            color: #0056b3;
+            color: #E91E63;
             margin-bottom: 8px;
             font-size: 1.1rem;
             letter-spacing: 0.5px;
@@ -352,6 +356,192 @@
             font-size: 0.9rem;
             color: #666;
             line-height: 1.5;
+        }
+        
+        /* ========================================
+            TRACK POPUP STYLES
+           ======================================== */
+        .track-popup {
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 300px;
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(156, 39, 176, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #9C27B0;
+            text-align: center;
+            pointer-events: none;
+        }
+        
+        .strand-card:hover .track-popup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(1);
+            pointer-events: auto;
+        }
+        
+        .track-popup-title {
+            font-size: 1.3rem;
+            color: #9C27B0;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .track-popup-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #9C27B0 0%, #FF9800 100%);
+            border-radius: 3px;
+        }
+        
+        .track-popup-content {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .track-popup-link {
+            background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+        }
+        
+        .track-popup-link:hover {
+            background: linear-gradient(135deg, #7B1FA2 0%, #C2185B 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(156, 39, 176, 0.4);
+        }
+        
+        .track-popup-link i {
+            color: #FFEB3B;
+        }
+        
+        .track-popup-arrow {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid #9C27B0;
+        }
+        
+        /* Principal Popup Styles */
+        .principal-popup {
+            position: absolute;
+            top: -250px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 320px;
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(156, 39, 176, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #9C27B0;
+            text-align: center;
+            pointer-events: none;
+        }
+        
+        .principal-card:hover .principal-popup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(1);
+            pointer-events: auto;
+        }
+        
+        .principal-popup-title {
+            font-size: 1.3rem;
+            color: #9C27B0;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .principal-popup-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #9C27B0 0%, #FF9800 100%);
+            border-radius: 3px;
+        }
+        
+        .principal-popup-content {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .principal-popup-link {
+            background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+        }
+        
+        .principal-popup-link:hover {
+            background: linear-gradient(135deg, #7B1FA2 0%, #C2185B 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(156, 39, 176, 0.4);
+        }
+        
+        .principal-popup-link i {
+            color: #FFEB3B;
+        }
+        
+        .principal-popup-arrow {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid #9C27B0;
         }
         
         /* ========================================
@@ -369,22 +559,22 @@
             align-items: flex-start;
             gap: 18px;
             padding: 22px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #f0f1f2 100%);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
             border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.1);
             border-left: 4px solid transparent;
         }
         
         .contact-item:hover {
-            border-left-color: #0056b3;
+            border-left-color: #9C27B0;
             transform: translateX(5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(156, 39, 176, 0.2);
         }
         
         /* Contact Icon Circle */
         .contact-icon {
-            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+            background: linear-gradient(135deg, #E91E63 0%, #9C27B0 100%);
             color: white;
             width: 60px;
             height: 60px;
@@ -394,12 +584,12 @@
             justify-content: center;
             font-size: 1.8rem;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
         }
         
         /* Contact Details Text */
         .contact-details h4 {
-            color: #0056b3;
+            color: #E91E63;
             margin-bottom: 8px;
             font-size: 1.1rem;
             font-weight: 700;
@@ -412,7 +602,7 @@
         
         /* Contact Links (Facebook) */
         .contact-details a {
-            color: #0056b3;
+            color: #9C27B0;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -422,8 +612,8 @@
         }
         
         .contact-details a:hover {
-            color: #ffd700;
-            border-bottom-color: #ffd700;
+            color: #FF9800;
+            border-bottom-color: #FF9800;
             text-decoration: underline;
         }
         
@@ -438,31 +628,31 @@
         }
         
         .admin-card {
-            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
             padding: 30px;
             border-radius: 8px;
             text-align: center;
-            border: 2px solid #dee2e6;
+            border: 2px solid #FFCC80;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.1);
             position: relative;
             overflow: visible;
         }
         
         .admin-card:hover {
-            border-color: #c00;
-            box-shadow: 0 10px 25px rgba(192, 0, 0, 0.15);
+            border-color: #9C27B0;
+            box-shadow: 0 10px 25px rgba(156, 39, 176, 0.15);
             transform: translateY(-8px);
         }
         
         .admin-card h4 {
-            color: #c00;
+            color: #E91E63;
             margin: 15px 0 8px 0;
             font-size: 1.3rem;
         }
         
         .admin-position {
-            color: #0056b3;
+            color: #4CAF50;
             font-weight: 700;
             font-size: 0.95rem;
             margin-bottom: 8px;
@@ -472,144 +662,26 @@
         .principal-image {
             width: 100px;
             height: 140px;
-            border: 3px solid #c00;
+            border: 3px solid #9C27B0;
             border-radius: 8px;
             object-fit: cover;
             margin: 0 auto 15px auto;
             display: block;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.15);
         }
         
-        /* ========================================
-            HOVER POPUP NOTE FOR FACULTY & STAFF
-           ======================================== */
-        .popup-trigger {
+        /* Principal Card with Popup */
+        .principal-card {
             position: relative;
-        }
-        
-        .faculty-popup {
-            position: absolute;
-            top: -180px; /* Positioned above the card */
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            width: 320px;
-            background: linear-gradient(135deg, #fff9e6 0%, #fff5cc 100%);
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 3px solid #ffd700;
-            text-align: center;
-            pointer-events: none;
-        }
-        
-        .popup-trigger:hover .faculty-popup {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) scale(1);
-            pointer-events: auto;
-        }
-        
-        .popup-header {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .popup-title {
-            font-size: 1.3rem;
-            color: #0056b3;
-            font-weight: 700;
-            margin: 0 0 15px 0;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .popup-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #0056b3 0%, #ffd700 100%);
-            border-radius: 3px;
-        }
-        
-        .popup-content {
-            color: #333;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .popup-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .popup-link {
-            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
-        }
-        
-        .popup-link:hover {
-            background: linear-gradient(135deg, #004494 0%, #002d5c 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
-        }
-        
-        .popup-link i {
-            color: #ffd700;
-        }
-        
-        .popup-arrow {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 15px solid #ffd700;
-        }
-        
-        /* Add subtle glow effect to popup title */
-        @keyframes subtleGlow {
-            0% {
-                text-shadow: 0 0 5px rgba(0, 86, 179, 0.1);
-            }
-            100% {
-                text-shadow: 0 0 10px rgba(0, 86, 179, 0.3);
-            }
-        }
-        
-        .popup-title {
-            animation: subtleGlow 2s infinite alternate;
+            cursor: pointer;
         }
         
         /* ========================================
             FOOTER SECTION
            ======================================== */
         footer {
-            background: linear-gradient(135deg, #004494 0%, #002d5c 100%);
-            color: white;
+            background: linear-gradient(135deg, #4CAF50 0%, #FFEB3B 100%);
+            color: #333;
             padding: 50px 0 25px 0;
             margin-top: 50px;
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
@@ -623,7 +695,7 @@
         }
         
         .footer-section h4 {
-            color: #ffd700;
+            color: #E91E63;
             margin-bottom: 18px;
             font-size: 1.3rem;
             font-weight: 700;
@@ -640,35 +712,35 @@
         }
         
         .footer-section ul li a {
-            color: #e0e0e0;
+            color: #555;
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
         }
         
         .footer-section ul li a:hover {
-            color: #ffd700;
+            color: #9C27B0;
             padding-left: 8px;
         }
         
         .footer-section ul li i {
             margin-right: 10px;
-            color: #ffd700;
+            color: #E91E63;
             width: 20px;
         }
         
         .footer-section p {
             line-height: 1.8;
-            color: #d0d0d0;
+            color: #555;
         }
         
         /* Copyright Section */
         .copyright {
             text-align: center;
             padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
             font-size: 0.9rem;
-            color: #aaa;
+            color: #666;
         }
         
         .copyright p {
@@ -679,18 +751,18 @@
             EDITABLE AREAS HIGHLIGHTING
            ======================================== */
         .editable {
-            background-color: #fffde7;
+            background-color: #F3E5F5;
             padding: 3px 8px;
             border-radius: 4px;
-            border: 1px dashed #ffd700;
+            border: 1px dashed #9C27B0;
             color: #333;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         
         .editable:hover {
-            background-color: #fff9c4;
-            border-color: #f57f17;
+            background-color: #E1BEE7;
+            border-color: #7B1FA2;
         }
         
         /* ========================================
@@ -748,26 +820,40 @@
                 padding: 30px 0;
             }
             
-            /* Adjust popup for mobile */
-            .faculty-popup {
+            /* Adjust popups for mobile */
+            .track-popup {
+                width: 250px;
+                padding: 20px;
+                top: -180px;
+            }
+            
+            .principal-popup {
                 width: 280px;
                 padding: 20px;
-                top: -160px; /* Adjusted for mobile */
+                top: -220px;
             }
         }
         
         @media (max-width: 480px) {
-            .faculty-popup {
-                width: 250px;
+            .track-popup {
+                width: 220px;
                 padding: 15px;
-                top: -150px; /* Further adjusted for small mobile */
+                top: -170px;
             }
             
-            .popup-title {
+            .principal-popup {
+                width: 250px;
+                padding: 15px;
+                top: -200px;
+            }
+            
+            .track-popup-title,
+            .principal-popup-title {
                 font-size: 1.1rem;
             }
             
-            .popup-content {
+            .track-popup-content,
+            .principal-popup-content {
                 font-size: 0.85rem;
             }
         }
@@ -782,11 +868,11 @@
                 <img src="https://github.com/dagranova/school-info/blob/main/images/snhs-logo.jpg/?raw=true" alt="Sulop National High School Logo" class="school-logo">
                 <div>
                     <h1 class="school-name">Sulop National High School</h1>
-                    <p class="school-tagline">A DepEd Public Secondary School</p>
+                    <p class="school-tagline">Senior High School Department</p>
                 </div>
             </div>
-            <!-- DepEd Official Badge -->
-            <div class="deped-badge">DEPED PUBLIC SCHOOL</div>
+            <!-- Senior High Badge -->
+            <div class="senior-high-badge">SENIOR HIGH SCHOOL</div>
         </div>
     </header>
     
@@ -796,7 +882,7 @@
             <ul>
                 <!-- Navigation Links with smooth scroll to sections -->
                 <li><a href="#about">About Our School</a></li>
-                <li><a href="#academics">Academic Programs</a></li>
+                <li><a href="#academics">Academic Tracks</a></li>
                 <li><a href="#administration">School Administration</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -808,24 +894,24 @@
         
         <!-- ===== ABOUT SECTION ===== -->
         <section id="about">
-            <h2>About Our School</h2>
-            <p>Sulop National High School is a public secondary educational institution committed to providing quality education to the youth of Sulop and neighboring communities.</p>
+            <h2>About Our Senior High School</h2>
+            <p>Sulop National High School Senior High Department is committed to providing quality senior high education to the youth of Sulop and neighboring communities, preparing students for higher education, employment, or entrepreneurship.</p>
             
             <div class="info-grid">
                 <!-- School Information Card -->
                 <div class="info-card">
-                    <h3>School Information</h3>
-                    <p><strong>School Type:</strong> <span class="editable">Public Secondary School under DepEd</span></p>
+                    <h3>Senior High Information</h3>
+                    <p><strong>School Type:</strong> <span class="editable">Public Senior High School under DepEd</span></p>
                     <p><strong>School ID:</strong> <span class="editable">304297</span></p>
-                    <p><strong>Established:</strong> <span class="editable">1966</span></p>
-                    <p><strong>School Head:</strong> <span class="editable">Jerome G. Samson</span></p>
+                    <p><strong>SHS Established:</strong> <span class="editable">2016</span></p>
+                    <p><strong>Grade Levels:</strong> Grades 11 & 12</p>
                 </div>
                 
                 <!-- Mission and Vision Card -->
                 <div class="info-card">
                     <h3>Mission & Vision</h3>
-                    <p><strong>Vision:</strong> Sulop National High School produces quality education in a culture of excellence demonstrated by the strength of competent teachers, cooperative parents, world-class instructional leaders with adequate resources that provide viability of purpose in a nurturing environment.</p>
-                    <p><strong>Mission:</strong> The school exists to provide students with functional curriculum, adequate resources, quality instructions by the competent and dedicated teachers and establishes a strong partnership with the community to produce higher learning outcome.</p>
+                    <p><strong>Vision:</strong> Sulop National High School Senior High produces quality education in a culture of excellence demonstrated by the strength of competent teachers, cooperative parents, world-class instructional leaders with adequate resources that provide viability of purpose in a nurturing environment.</p>
+                    <p><strong>Mission:</strong> The Senior High Department exists to provide students with functional curriculum, adequate resources, quality instructions by competent and dedicated teachers and establishes a strong partnership with the community to produce higher learning outcomes for college, career, and life readiness.</p>
                     <p><strong>Core Values:</strong> Maka-Diyos, Makatao, Makakalikasan, Makabansa</p>
                 </div>
             </div>
@@ -852,8 +938,8 @@
                 </div>
                 
                 <!-- Directions Information -->
-                <div style="margin-top: 20px; background-color: #f0f8ff; padding: 20px; border-radius: 6px; border-left: 5px solid #0056b3;">
-                    <p><strong><i class="fas fa-directions"></i> How to get to Sulop National High School:</strong></p>
+                <div style="margin-top: 20px; background-color: #FFF9C4; padding: 20px; border-radius: 6px; border-left: 5px solid #E91E63;">
+                    <p><strong><i class="fas fa-directions"></i> How to get to Sulop National High School Senior High:</strong></p>
                     <ul style="margin-left: 20px; margin-top: 10px;">
                         <li><strong>From Davao City:</strong> Take a bus bound for Digos City and alight at Sulop terminal</li>
                         <li><strong>From Digos City:</strong> Take a bus or van going to Sulop (approximately 1 hour travel time)</li>
@@ -869,27 +955,14 @@
         
         <!-- ===== ACADEMICS SECTION ===== -->
         <section id="academics">
-            <h2>Academic Programs</h2>
-            <p>Sulop National High School offers a comprehensive secondary education program aligned with the K-12 curriculum of the Department of Education.</p>
+            <h2>Academic Tracks & Strands</h2>
+            <p>Sulop National High School Senior High Department offers comprehensive tracks and strands aligned with the K-12 curriculum of the Department of Education, preparing students for diverse career paths.</p>
             
             <div class="academic-levels">
-                <!-- Junior High School Program -->
-                <div class="academic-level">
-                    <h3>Junior High School</h3>
-                    <p>Grades 7 to 10 following the enhanced basic education curriculum.</p>
-                    <ul class="grade-list">
-                        <li>Grade 7</li>
-                        <li>Grade 8</li>
-                        <li>Grade 9</li>
-                        <li>Grade 10</li>
-                    </ul>
-                    <p><strong>Curriculum:</strong> Core subjects with exploratory Technology and Livelihood Education (TLE) courses.</p>
-                </div>
-                
                 <!-- Senior High School Program -->
                 <div class="academic-level">
-                    <h3>Senior High School</h3>
-                    <p>Grades 11 and 12 with specialized tracks and strands.</p>
+                    <h3>Senior High School Program</h3>
+                    <p>Grades 11 and 12 with specialized tracks and strands designed for college preparation, technical skills development, and career readiness.</p>
                     <ul class="grade-list">
                         <li>Grade 11</li>
                         <li>Grade 12</li>
@@ -898,24 +971,119 @@
                     
                     <!-- SHS Strands/Specializations -->
                     <div class="strands-container">
+                        <!-- STEM Track with Popup -->
                         <div class="strand-card">
                             <div class="strand-name">STEM</div>
-                            <div class="strand-desc">Science, Technology, Engineering, and Mathematics</div>
+                            <div class="strand-desc">Science, Technology, Engineering, and Mathematics - prepares students for college degrees in science and technology-related courses</div>
+                            
+                            <!-- STEM Track Popup -->
+                            <div class="track-popup">
+                                <h3 class="track-popup-title">STEM Track Details</h3>
+                                <div class="track-popup-content">
+                                    <p>Want to learn more about our STEM program?</p>
+                                    <p>Click below to view detailed information about curriculum, subjects, and career paths.</p>
+                                </div>
+                                <a href="branch.html#stem" class="track-popup-link">
+                                    <i class="fas fa-external-link-alt"></i> View STEM Track Details
+                                </a>
+                                <div class="track-popup-arrow"></div>
+                            </div>
                         </div>
+                        
+                        <!-- ASH Track with Popup -->
                         <div class="strand-card">
-                            <div class="strand-name">HUMSS</div>
-                            <div class="strand-desc">Humanities and Social Sciences</div>
+                            <div class="strand-name">ASH</div>
+                            <div class="strand-desc">Arts and Social Sciences - focuses on human behavior, literature, arts, and social sciences</div>
+                            
+                            <!-- ASH Track Popup -->
+                            <div class="track-popup">
+                                <h3 class="track-popup-title">ASH Track Details</h3>
+                                <div class="track-popup-content">
+                                    <p>Want to learn more about our Arts and Social Sciences program?</p>
+                                    <p>Click below to view detailed information about curriculum, subjects, and career paths.</p>
+                                </div>
+                                <a href="branch.html#ash" class="track-popup-link">
+                                    <i class="fas fa-external-link-alt"></i> View ASH Track Details
+                                </a>
+                                <div class="track-popup-arrow"></div>
+                            </div>
                         </div>
+                        
+                        <!-- ABM Track with Popup -->
                         <div class="strand-card">
                             <div class="strand-name">ABM</div>
-                            <div class="strand-desc">Accountancy, Business, and Management</div>
+                            <div class="strand-desc">Accountancy, Business, and Management - prepares students for careers in business and entrepreneurship</div>
+                            
+                            <!-- ABM Track Popup -->
+                            <div class="track-popup">
+                                <h3 class="track-popup-title">ABM Track Details</h3>
+                                <div class="track-popup-content">
+                                    <p>Want to learn more about our Accountancy, Business, and Management program?</p>
+                                    <p>Click below to view detailed information about curriculum, subjects, and career paths.</p>
+                                </div>
+                                <a href="branch.html#abm" class="track-popup-link">
+                                    <i class="fas fa-external-link-alt"></i> View ABM Track Details
+                                </a>
+                                <div class="track-popup-arrow"></div>
+                            </div>
                         </div>
+                        
+                        <!-- GAS Track with Popup -->
+                        <div class="strand-card">
+                            <div class="strand-name">GAS</div>
+                            <div class="strand-desc">General Academic Strand - provides flexibility for students who are undecided on their career path</div>
+                            
+                            <!-- GAS Track Popup -->
+                            <div class="track-popup">
+                                <h3 class="track-popup-title">GAS Track Details</h3>
+                                <div class="track-popup-content">
+                                    <p>Want to learn more about our General Academic Strand program?</p>
+                                    <p>Click below to view detailed information about curriculum, subjects, and career paths.</p>
+                                </div>
+                                <a href="branch.html#gas" class="track-popup-link">
+                                    <i class="fas fa-external-link-alt"></i> View GAS Track Details
+                                </a>
+                                <div class="track-popup-arrow"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- TVL Track with Popup -->
                         <div class="strand-card">
                             <div class="strand-name">TVL Track</div>
-                            <div class="strand-desc">Technical-Vocational-Livelihood</div>
+                            <div class="strand-desc">Technical-Vocational-Livelihood - develops technical skills for immediate employment after graduation</div>
+                            
+                            <!-- TVL Track Popup -->
+                            <div class="track-popup">
+                                <h3 class="track-popup-title">TVL Track Details</h3>
+                                <div class="track-popup-content">
+                                    <p>Want to learn more about our Technical-Vocational-Livelihood program?</p>
+                                    <p>Click below to view detailed information about curriculum, specializations, and career paths.</p>
+                                </div>
+                                <a href="branch.html#tvl" class="track-popup-link">
+                                    <i class="fas fa-external-link-alt"></i> View TVL Track Details
+                                </a>
+                                <div class="track-popup-arrow"></div>
+                            </div>
                         </div>
                     </div>
                     <p class="editable" style="margin-top: 20px; font-style: italic; color: #555;">Within the TVL strand, there are specializations such as ICT, Bartending, Cookery, Housekeeping, and Beauty Care.</p>
+                </div>
+                
+                <!-- Senior High Benefits -->
+                <div class="academic-level">
+                    <h3>Why Choose Our Senior High?</h3>
+                    <ul class="grade-list">
+                        <li>Competent and Licensed Teachers</li>
+                        <li>Modern Learning Facilities</li>
+                        <li>Industry-Relevant Curriculum</li>
+                        <li>Work Immersion Opportunities</li>
+                        <li>College and Career Guidance</li>
+                        <li>Academic and Non-Academic Programs</li>
+                        <li>Student Organizations and Clubs</li>
+                        <li>Scholarship Opportunities</li>
+                    </ul>
+                    <p style="margin-top: 20px;"><strong>Enrollment Period:</strong> Typically starts in April for the upcoming school year</p>
+                    <p><strong>Requirements:</strong> Form 138 (Report Card), PSA Birth Certificate, Good Moral Certificate</p>
                 </div>
             </div>
         </section>
@@ -923,42 +1091,36 @@
         <!-- ===== ADMINISTRATION SECTION ===== -->
         <section id="administration">
             <h2>School Administration</h2>
-            <p>Meet the dedicated team leading Sulop National High School towards educational excellence.</p>
+            <p>Meet the dedicated team leading Sulop National High School Senior High Department towards educational excellence and student success.</p>
             
             <div class="admin-grid">
-                <!-- Principal Card -->
-                <div class="admin-card">
+                <!-- Principal Card with Popup -->
+                <div class="admin-card principal-card">
                     <img src="https://github.com/dagranova/school-info/blob/main/images/principal-image.png/?raw=true" alt="School Principal" class="principal-image">
                     <h4>Jerome G. Samson</h4>
                     <p class="admin-position">School Principal</p>
-                    <p><small>Principal of Sulop National High School</small></p>
-                </div>
-                
-                <!-- Faculty & Staff Card with Hover Popup -->
-                <div class="admin-card popup-trigger">
-                    <i class="fas fa-users fa-4x" style="color: #0056b3; margin-bottom: 15px;"></i>
-                    <h4>Faculty & Staff</h4>
-                    <p class="admin-position">Dedicated Educators</p>
-                    <p><small>Qualified teachers committed to student development</small></p>
+                    <p><small>Overall School Administrator</small></p>
                     
-                    <!-- Hover Popup Note -->
-                    <div class="faculty-popup">
-                        <div class="popup-header">
-                            <h4 class="popup-title">Looking for More Details?</h4>
+                    <!-- Principal Popup -->
+                    <div class="principal-popup">
+                        <h3 class="principal-popup-title">Principal's Biography</h3>
+                        <div class="principal-popup-content">
+                            <p>Want to learn more about Principal Jerome G. Samson?</p>
+                            <p>Click below to view his complete biography, educational background, and achievements.</p>
                         </div>
-                        <div class="popup-content">
-                            <p>For comprehensive information about our faculty members, subject teachers, and staff profiles, please visit our official Facebook pages where you can find the latest updates, announcements, and contact information.</p>
-                        </div>
-                        <div class="popup-links">
-                            <a href="https://www.facebook.com/profile.php?id=100064202107054" target="_blank" rel="noopener noreferrer" class="popup-link">
-                                <i class="fab fa-facebook"></i> Main Campus Facebook Page
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=61560308523924" target="_blank" rel="noopener noreferrer" class="popup-link">
-                                <i class="fab fa-facebook"></i> Senior High Facebook Page
-                            </a>
-                        </div>
-                        <div class="popup-arrow"></div>
+                        <a href="branch.html#principal" class="principal-popup-link">
+                            <i class="fas fa-external-link-alt"></i> View Principal's Biography
+                        </a>
+                        <div class="principal-popup-arrow"></div>
                     </div>
+                </div>
+        
+                <!-- Faculty & Staff Card -->
+                <div class="admin-card" style="cursor: pointer;" onclick="window.location.href='branch.html#faculty'">
+                    <i class="fas fa-chalkboard-teacher fa-4x" style="color: #4CAF50; margin-bottom: 15px;"></i>
+                    <h4>Senior High Faculty</h4>
+                    <p class="admin-position">Dedicated Educators</p>
+                    <p><small>Qualified teachers specialized in Senior High subjects</small></p>
                 </div>
             </div>
         </section>
@@ -966,7 +1128,7 @@
         <!-- ===== CONTACT SECTION ===== -->
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>For inquiries, concerns, or additional information about Sulop National High School, please reach out through the following channels:</p>
+            <p>For inquiries, concerns, or additional information about Sulop National High School Senior High Department, please reach out through the following channels:</p>
             
             <div class="contact-info">
                 <!-- Phone Contact Item -->
@@ -988,8 +1150,8 @@
                     </div>
                     <div class="contact-details">
                         <h4>Email Address</h4>
-                        <p><span class="editable">sulop.nhs@deped.gov.ph</span></p>
-                        <p><small>For official correspondence and inquiries</small></p>
+                        <p><span class="editable">sulop.nhs.shs@deped.gov.ph</span></p>
+                        <p><small>For senior high specific inquiries</small></p>
                     </div>
                 </div>
                 
@@ -1012,12 +1174,25 @@
                         <i class="fab fa-facebook"></i>
                     </div>
                     <div class="contact-details">
-                        <h4>Follow Us on Facebook</h4>
-                        <p><a href="https://www.facebook.com/profile.php?id=100064202107054" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Main Campus</a></p>
-                        <p><a href="https://www.facebook.com/profile.php?id=61560308523924" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Senior High</a></p>
-                        <p><small>Connect with us on social media</small></p>
+                        <h4>Follow Our Senior High</h4>
+                        <p><a href="https://www.facebook.com/profile.php?id=61560308523924" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Senior High Facebook Page</a></p>
+                        <p><small>Connect with us for updates and announcements</small></p>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Enrollment Information -->
+            <div style="margin-top: 30px; background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); padding: 25px; border-radius: 8px; border-left: 5px solid #9C27B0;">
+                <h3 style="color: #9C27B0; margin-top: 0;"><i class="fas fa-info-circle"></i> Enrollment Information</h3>
+                <p>For incoming Grade 11 students and transferees, please prepare the following requirements:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Original Form 138 (Report Card) from Junior High</li>
+                    <li>PSA/NSO Birth Certificate (photocopy and original for verification)</li>
+                    <li>Certificate of Good Moral Character</li>
+                    <li>2x2 ID pictures (3 copies)</li>
+                    <li>Long brown envelope</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Enrollment Schedule:</strong> April to May (for incoming Grade 11), June (for late enrollees)</p>
             </div>
         </section>
     </main>
@@ -1030,15 +1205,15 @@
                 <div class="footer-section">
                     <img src="https://github.com/dagranova/school-info/blob/main/images/snhs-logo.jpg/?raw=true" alt="Sulop National High School Logo" class="footer-school-logo">
                     <h4>Sulop National High School</h4>
-                    <p>A DepEd Public Secondary School committed to providing quality education to the youth.</p>
+                    <p>Senior High School Department - Preparing students for college, career, and life success.</p>
                 </div>
                 
                 <!-- Quick Navigation Links -->
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About Our School</a></li>
-                        <li><a href="#academics">Academic Programs</a></li>
+                        <li><a href="#about">About Our Senior High</a></li>
+                        <li><a href="#academics">Academic Tracks</a></li>
                         <li><a href="#administration">School Administration</a></li>
                         <li><a href="#contact">Contact Information</a></li>
                     </ul>
@@ -1046,30 +1221,27 @@
                 
                 <!-- Footer Contact Info -->
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
+                    <h4>Senior High Contact</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> CII Drive, Poblacion, Sulop, Davao del Sur</li>
                         <li><i class="fas fa-phone"></i> 0917 115 7352</li>
-                        <li><i class="fas fa-envelope"></i> sulop.nhs@deped.gov.ph</li>
+                        <li><i class="fas fa-envelope"></i> sulop.nhs.shs@deped.gov.ph</li>
+                        <li><i class="fab fa-facebook"></i> fb.com/SulopNHS-SHS</li>
                     </ul>
                 </div>
             </div>
             
             <!-- Copyright Information -->
             <div class="copyright">
-                <p>&copy; <span id="currentYear"></span> Sulop National High School. All Rights Reserved.</p>
-                <p>This is an official school website for informational purposes.</p>
+                <p>&copy; <span id="currentYear"></span> Sulop National High School - Senior High Department. All Rights Reserved.</p>
+                <p>This is the official Senior High School website for informational purposes.</p>
                 <p><small>Created by <strong>Harvey Gel B. Cimagala</strong>, Grade 12 - Olivo | Sulop National High School</small></p>
             </div>
         </div>
     </footer>
 
-    <!-- ===== EXTERNAL JAVASCRIPT FILE ===== -->
-    <script src="School_info_snhs.js"></script>
-    
-    <!-- ===== INLINE SCRIPTS (BACKUP) ===== -->
+    <!-- ===== INLINE SCRIPTS ===== -->
     <script>
-        /* Fallback script - main functionality is in School_info_snhs.js */
         /* Smooth scrolling for navigation links */
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1084,6 +1256,56 @@
                     });
                 }
             });
+        });
+        
+        // Set current year in copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Highlight current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Add click functionality to track cards for mobile users
+        document.querySelectorAll('.strand-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // If on mobile, trigger the link in the popup
+                if (window.innerWidth <= 768) {
+                    const link = this.querySelector('.track-popup-link');
+                    if (link) {
+                        window.location.href = link.getAttribute('href');
+                    }
+                }
+            });
+        });
+        
+        // Add click functionality to principal card for mobile users
+        document.querySelector('.principal-card').addEventListener('click', function() {
+            // If on mobile, trigger the link in the popup
+            if (window.innerWidth <= 768) {
+                const link = this.querySelector('.principal-popup-link');
+                if (link) {
+                    window.location.href = link.getAttribute('href');
+                }
+            }
         });
     </script>
 </body>

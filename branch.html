@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulop National High School - Administration</title>
+    <!-- Font Awesome Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ===== MAIN STYLESHEET ===== -->
+    <style>
+        /* ========================================
+            RESET AND BASE STYLES
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fffef5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+            HEADER SECTION - SCHOOL BRANDING
+           ======================================== */
+        header {
+            background: linear-gradient(135deg, #4CAF50 0%, #FFEB3B 100%);
+            color: #333;
+            padding: 25px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .school-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* School Logo Image */
+        .school-logo {
+            width: 100px;
+            height: 100px;
+            border: 4px solid #FF9800;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .school-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-school-logo {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #FF9800;
+            border-radius: 6px !important;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .school-name {
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+            color: #333;
+        }
+
+        .school-tagline {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+            color: #333;
+        }
+
+        .senior-high-badge {
+            background: linear-gradient(135deg, #E91E63 0%, #9C27B0 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 35px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+        }
+
+        /* ========================================
+            NAVIGATION - STICKY NAVIGATION BAR
+           ======================================== */
+        nav {
+            overflow: hidden;
+            background: linear-gradient(90deg, #4CAF50 0%, #FFEB3B 100%);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 12px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Navigation Menu List */
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        /* Navigation Links with Hover Animation */
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: block;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #9C27B0;
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Animated Underline on Hover */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #9C27B0;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Active Link Indicator - Shows Current Section */
+        nav ul li a.active {
+            color: #9C27B0;
+            background-color: rgba(156, 39, 176, 0.1);
+        }
+
+        nav ul li a.active::after {
+            width: 100%;
+            background-color: #9C27B0;
+        }
+
+        /* ========================================
+            MAIN CONTENT AREA
+           ======================================== */
+        main {
+            padding: 50px 0;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: white;
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.08);
+            border-left: 6px solid #FF9800;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.15);
+        }
+
+        /* Section Headings */
+        h2 {
+            color: #FF9800;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            color: #E91E63;
+            margin: 20px 0 15px 0;
+            font-size: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* ========================================
+            ADMINISTRATION SECTION - DETAILED STAFF INFO
+           ======================================== */
+        .admin-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .admin-detail-card {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #FFCC80;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.1);
+        }
+
+        .admin-detail-card:hover {
+            border-color: #9C27B0;
+            box-shadow: 0 10px 25px rgba(156, 39, 176, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .admin-detail-card h4 {
+            color: #E91E63;
+            margin: 15px 0 8px 0;
+            font-size: 1.3rem;
+        }
+
+        .admin-position {
+            color: #4CAF50;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .admin-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .admin-contact {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .admin-contact h5 {
+            color: #9C27B0;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .admin-contact p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Principal Image */
+        .principal-image {
+            width: 120px;
+            height: 160px;
+            border: 3px solid #9C27B0;
+            border-radius: 8px;
+            object-fit: cover;
+            margin: 0 auto 15px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.15);
+        }
+
+        /* ========================================
+            FACULTY SECTION STYLING
+           ======================================== */
+        .faculty-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #FFCC80;
+        }
+
+        .faculty-section h3 {
+            color: #4CAF50;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .faculty-section:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        /* Track Grid */
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .track-card {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #FFCC80;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.1);
+        }
+
+        .track-card:hover {
+            border-color: #9C27B0;
+            box-shadow: 0 8px 20px rgba(156, 39, 176, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .track-card i {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 3rem;
+        }
+
+        .track-card h4 {
+            color: #E91E63;
+            margin: 15px 0 8px 0;
+            font-size: 1.2rem;
+        }
+
+        .track-specialization {
+            color: #9C27B0;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .track-description {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Track Detail Section */
+        .track-detail {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #9C27B0;
+        }
+
+        .track-detail h3 {
+            color: #9C27B0;
+            margin-top: 0;
+        }
+
+        .track-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .track-info-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #FFCC80;
+        }
+
+        .track-info-item h4 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Faculty Grid for Track Sections */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .faculty-card {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #81C784;
+            transition: all 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.2);
+            border-color: #4CAF50;
+        }
+
+        .faculty-image {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid #81C784;
+            margin: 0 auto 10px auto;
+        }
+
+        .faculty-name {
+            color: #2E7D32;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .faculty-position {
+            color: #666;
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+
+        /* Image Carousel Styles */
+        .image-carousel-container {
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .image-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .image-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 250px;
+            scroll-snap-align: start;
+            text-align: center;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #FFCC80;
+            transition: all 0.3s ease;
+            background-color: #f0f0f0;
+        }
+
+        .carousel-image:hover {
+            transform: scale(1.05);
+            border-color: #9C27B0;
+        }
+
+        .carousel-caption {
+            margin-top: 10px;
+            padding: 10px;
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            border-radius: 6px;
+        }
+
+        .carousel-caption h5 {
+            color: #E91E63;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .carousel-caption p {
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .carousel-nav-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #4CAF50 0%, #FFEB3B 100%);
+            color: #333;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-nav-btn:hover {
+            background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Back to Home Button */
+        .back-home-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+        }
+
+        .back-home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(156, 39, 176, 0.4);
+        }
+
+        .back-home-button i {
+            margin-right: 8px;
+        }
+
+        /* ========================================
+            FOOTER SECTION
+           ======================================== */
+        footer {
+            background: linear-gradient(135deg, #4CAF50 0%, #FFEB3B 100%);
+            color: #333;
+            padding: 50px 0 25px 0;
+            margin-top: 50px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: #E91E63;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .footer-section ul li a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .footer-section ul li a:hover {
+            color: #9C27B0;
+            padding-left: 8px;
+        }
+
+        .footer-section ul li i {
+            margin-right: 10px;
+            color: #E91E63;
+            width: 20px;
+        }
+
+        .footer-section p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Copyright Section */
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .copyright p {
+            margin: 5px 0;
+        }
+
+        /* ========================================
+            RESPONSIVE DESIGN - MOBILE & TABLET
+           ======================================== */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 0;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .school-brand {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .school-name {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            nav ul li {
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            main {
+                padding: 30px 0;
+            }
+
+            .admin-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculties-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .track-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .carousel-item {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .track-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculties-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            }
+
+            .carousel-item {
+                width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER SECTION ===== -->
+    <header>
+        <div class="container header-content">
+            <!-- School Logo and Branding -->
+            <div class="school-brand">
+                <img src="https://github.com/dagranova/school-info/blob/main/images/snhs-logo.jpg/?raw=true" alt="Sulop National High School Logo" class="school-logo">
+                <div>
+                    <h1 class="school-name">Sulop National High School</h1>
+                    <p class="school-tagline">Senior High School Department</p>
+                </div>
+            </div>
+            <!-- Senior High Badge -->
+            <div class="senior-high-badge">SENIOR HIGH SCHOOL</div>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGATION BAR (STICKY) ===== -->
+    <nav>
+        <div class="container">
+            <ul>
+                <!-- Navigation Links with smooth scroll to sections -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#principal">School Principal</a></li>
+                <li><a href="#faculties">School Faculties</a></li>
+                <li><a href="#stem">STEM Track</a></li>
+                <li><a href="#abm">ABM Track</a></li>
+                <li><a href="#ash">ASH Track</a></li>
+                <li><a href="#gas">GAS Track</a></li>
+                <li><a href="#tvl">TVL Track</a></li>
+                <li><a href="#core">Core Subjects</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT AREA ===== -->
+    <main class="container">
+
+        <!-- ===== PRINCIPAL SECTION ===== -->
+        <section id="principal">
+            <h2>School Principal</h2>
+            <p>Meet our dedicated school principal who leads Sulop National High School with vision and excellence.</p>
+
+            <div class="admin-detail-grid">
+                <!-- Principal Card -->
+                <div class="admin-detail-card">
+                    <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jerome%20G.%20Samson%2C%20MACE%20-%20School%20Principal%20I.jpg/?raw=true" alt="School Principal" class="principal-image">
+                    <h4>Jerome G. Samson, MACE</h4>
+                    <p class="admin-position">School Principal I</p>
+                    <p class="admin-description">Mr. Jerome G. Samson serves as the principal of Sulop National High School, overseeing the overall administration and educational excellence of both Junior and Senior High School departments. With years of experience in education leadership, he is committed to providing quality education and fostering a nurturing environment for all students.</p>
+                    <div class="admin-contact">
+                        <h5>Contact Information</h5>
+                        <p><strong>Email:</strong> jerome.samson@snhs.edu.ph</p>
+                        <p><strong>Phone:</strong> (082) 123-4567</p>
+                        <p><strong>Office Hours:</strong> Monday - Friday, 7:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- Principal Biography -->
+                <div class="admin-detail-card">
+                    <i class="fas fa-user-graduate fa-4x" style="color: #FFD700; margin-bottom: 15px;"></i>
+                    <h4>Principal's Biography</h4>
+                    <p class="admin-position">Educational Journey & Leadership</p>
+                    <p class="admin-description">Mr. Jerome G. Samson has been serving as an educational leader for over 15 years. He holds a Master's Degree in Educational Management and a Bachelor's Degree in Secondary Education. His journey in education began as a Mathematics teacher, where he developed innovative teaching strategies that improved student performance.</p>
+                    <p class="admin-description">Throughout his career, Mr. Samson has received numerous awards for educational leadership and has been instrumental in implementing curriculum reforms that align with DepEd's K-12 program. He believes in creating a school environment where every student can thrive academically, socially, and emotionally.</p>
+                    <p class="admin-description">Under his leadership, Sulop National High School has seen significant improvements in student achievement, teacher development, and community engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SCHOOL FACULTIES SECTION ===== -->
+        <section id="faculties">
+            <h2>School Faculties & Staff</h2>
+            <p>Meet our dedicated team of educators and staff who provide quality senior high education at Sulop National High School.</p>
+            
+            <div class="faculties-intro">
+                <p>Our Senior High School is staffed by highly qualified and licensed professionals who are committed to providing quality education aligned with DepEd's K-12 curriculum. Each faculty member and staff contributes to creating an inclusive and supportive learning environment.</p>
+            </div>
+
+            <!-- Administration & Support Staff Section -->
+            <div class="faculty-section">
+                <h3>Administration & Support Staff</h3>
+                <p class="section-description">Our dedicated administrative team ensures smooth school operations and supports the educational mission of Sulop National High School.</p>
+                
+                <div class="faculty-grid">
+                    <!-- Aileen Delfino -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Aileen%20Delfino%20-%20Administrative%20Staff.jpg/?raw=true" alt="Aileen Delfino" class="faculty-image">
+                        <div class="faculty-name">Aileen Delfino</div>
+                        <div class="faculty-position">Administrative Staff</div>
+                    </div>
+                    
+                    <!-- Chrysolyte Ann M. Brandares -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Chrysolyte%20Ann%20M.%20Brandares%20-%20Administrative%20Officer%20II.jpg/?raw=true" alt="Chrysolyte Ann M. Brandares" class="faculty-image">
+                        <div class="faculty-name">Chrysolyte Ann M. Brandares</div>
+                        <div class="faculty-position">Administrative Officer II</div>
+                    </div>
+                    
+                    <!-- Ivy Gladys P. Tabanao -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Ivy%20Gladys%20P.%20Tabanao%2C%20LPT%2C%20RGC%20-%20Guidance%20Counselor%20II.jpg/?raw=true" alt="Ivy Gladys P. Tabanao" class="faculty-image">
+                        <div class="faculty-name">Ivy Gladys P. Tabanao, LPT, RGC</div>
+                        <div class="faculty-position">Guidance Counselor II</div>
+                    </div>
+                    
+                    <!-- Jimmy A. Embodo -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jimmy%20A.%20Embodo%2C%20MAED-MT%20-%20Senior%20High%20School%20Coordinator.jpg/?raw=true" alt="Jimmy A. Embodo" class="faculty-image">
+                        <div class="faculty-name">Jimmy A. Embodo, MAED-MT</div>
+                        <div class="faculty-position">Senior High School Coordinator</div>
+                    </div>
+                    
+                    <!-- Kyle Cassey S. Navarro -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Kyle%20Cassey%20S.%20Navarro%20-%20Registrar%20I.jpg/?raw=true" alt="Kyle Cassey S. Navarro" class="faculty-image">
+                        <div class="faculty-name">Kyle Cassey S. Navarro</div>
+                        <div class="faculty-position">Registrar I</div>
+                    </div>
+                    
+                    <!-- Recyl V. Rivas -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Recyl%20V.%20Rivas%20-%20Administrative%20Assistant%20II.jpg/?raw=true" alt="Recyl V. Rivas" class="faculty-image">
+                        <div class="faculty-name">Recyl V. Rivas</div>
+                        <div class="faculty-position">Administrative Assistant II</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject Teachers Section -->
+            <div class="faculty-section">
+                <h3>Subject Teachers</h3>
+                <p class="section-description">Our subject teachers bring expertise and passion to their respective fields, ensuring quality education across all disciplines.</p>
+                
+                <div class="faculty-grid">
+                    <!-- Shahoney Faith L. Gicale -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Shahoney%20Faith%20L.%20Gicale%2C%20LPT%2C%20MAED-MT%20-%20Subject%20Teacher%20%20Master%20Teacher%20II.jpg/?raw=true" alt="Shahoney Faith L. Gicale" class="faculty-image">
+                        <div class="faculty-name">Shahoney Faith L. Gicale, LPT, MAED-MT</div>
+                        <div class="faculty-position">Subject Teacher / Master Teacher II</div>
+                    </div>
+                    
+                    <!-- Dr. Faye Conssesal L. Mondejar -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Dr.%20Faye%20Conssesal%20L.%20Mondejar%20-%20Subject%20Teacher.jpg/?raw=true" alt="Dr. Faye Conssesal L. Mondejar" class="faculty-image">
+                        <div class="faculty-name">Dr. Faye Conssesal L. Mondejar</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Leah G. Maquiling -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Leah%20G.%20Maquiling%2C%20LPT%20-%20Subject%20Teacher%20%20Local%20School%20Board%20Teacher.jpg/?raw=true" alt="Leah G. Maquiling" class="faculty-image">
+                        <div class="faculty-name">Leah G. Maquiling, LPT</div>
+                        <div class="faculty-position">Subject Teacher / Local School Board Teacher</div>
+                    </div>
+                    
+                    <!-- Rhesamie A. Bantilan -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Rhesamie%20A.%20Bantilan%2C%20LPT%20-%20Subject%20Teacher%20%20Provincial%20School%20Board%20Teacher.jpg/?raw=true" alt="Rhesamie A. Bantilan" class="faculty-image">
+                        <div class="faculty-name">Rhesamie A. Bantilan, LPT</div>
+                        <div class="faculty-position">Subject Teacher / Provincial School Board Teacher</div>
+                    </div>
+                    
+                    <!-- Judy Mae A. Lipatan -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Judy%20Mae%20A.%20Lipatan%2C%20LPT%20-%20Subject%20Teacher%20%20Provincial%20School%20Board%20Teacher.jpg/?raw=true" alt="Judy Mae A. Lipatan" class="faculty-image">
+                        <div class="faculty-name">Judy Mae A. Lipatan, LPT</div>
+                        <div class="faculty-position">Subject Teacher / Provincial School Board Teacher</div>
+                    </div>
+                    
+                    <!-- Ivya A. Encarnacion -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Ivya%20A.%20Encarnacion%2C%20LPT%20-%20Subject%20Teacher%20%20Provincial%20School%20Board%20Teacher.jpg/?raw=true" alt="Ivya A. Encarnacion" class="faculty-image">
+                        <div class="faculty-name">Ivya A. Encarnacion, LPT</div>
+                        <div class="faculty-position">Subject Teacher / Provincial School Board Teacher</div>
+                    </div>
+                    
+                    <!-- Riza R. Garde -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Riza%20R.%20Garde%2C%20MBA%20-%20Subject%20Teacher.jpg/?raw=true" alt="Riza R. Garde" class="faculty-image">
+                        <div class="faculty-name">Riza R. Garde, MBA</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- April Jay G. Diolata -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/April%20Jay%20G.%20Diolata%2C%20LPT%20-%20Subject%20Teacher.jpg/?raw=true" alt="April Jay G. Diolata" class="faculty-image">
+                        <div class="faculty-name">April Jay G. Diolata, LPT</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Jerissa Mae B. Delos Reyes -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jerissa%20Mae%20B.%20Delos%20Reyes%2C%20LPT%20-%20Subject%20Teacher.jpg/?raw=true" alt="Jerissa Mae B. Delos Reyes" class="faculty-image">
+                        <div class="faculty-name">Jerissa Mae B. Delos Reyes, LPT</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Mary Jean G. Olivo -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Mary%20Jean%20G.%20Olivo%2C%20LPT%20-%20Subject%20Teacher.jpg/?raw=true" alt="Mary Jean G. Olivo" class="faculty-image">
+                        <div class="faculty-name">Mary Jean G. Olivo, LPT</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Leizl S. Magallanes -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Leizl%20S.%20Magallanes%2C%20LPT%2C%20MAED(CAR)%20-%20Subject%20Teacher.jpg/?raw=true" alt="Leizl S. Magallanes" class="faculty-image">
+                        <div class="faculty-name">Leizl S. Magallanes, LPT, MAED(CAR)</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Valerie Amor B. Onez -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Valerie%20Amor%20B.%20Onez%2C%20LPT%20-%20Subject%20Teacher.jpg/?raw=true" alt="Valerie Amor B. Onez" class="faculty-image">
+                        <div class="faculty-name">Valerie Amor B. Onez, LPT</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Engr. Erwin F. Cortes -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Engr.%20Erwin%20F.%20Cortes%2C%20LPT%20-%20Subject%20Teacher%20%20Prefect%20of%20Discipline%20In-Charge.jpg/?raw=true" alt="Engr. Erwin F. Cortes" class="faculty-image">
+                        <div class="faculty-name">Engr. Erwin F. Cortes, LPT</div>
+                        <div class="faculty-position">Subject Teacher / Prefect of Discipline In-Charge</div>
+                    </div>
+                    
+                    <!-- John Paul Cameros -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/John%20Paul%20Cameros%2C%20LPT%2C%20MBA%20-%20Subject%20Teacher.jpg/?raw=true" alt="John Paul Cameros" class="faculty-image">
+                        <div class="faculty-name">John Paul Cameros, LPT, MBA</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                    
+                    <!-- Joan C. Ramos -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Joan%20C.%20Ramos%2C%20LPT%2C%20MBA%20-%20Subject%20Teacher.jpg/?raw=true" alt="Joan C. Ramos" class="faculty-image">
+                        <div class="faculty-name">Joan C. Ramos, LPT, MBA</div>
+                        <div class="faculty-position">Subject Teacher</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note about faculty listing -->
+            <div style="margin-top: 30px; background-color: #FFF9C4; padding: 20px; border-radius: 8px; border-left: 5px solid #FF9800;">
+                <p><strong>Note:</strong> This listing represents our complete faculty and staff directory. All teachers are Licensed Professional Teachers (LPT) with additional specializations as indicated.</p>
+                <p style="margin-top: 10px;"><i class="fas fa-info-circle"></i> <strong>Abbreviations:</strong> LPT (Licensed Professional Teacher), MAED (Master of Arts in Education), MBA (Master of Business Administration), MIT (Master in Information Technology), RN (Registered Nurse), MAN (Master of Arts in Nursing), MAEE (Master of Arts in Educational Entrepreneurship), MACE (Master of Arts in Catholic Education), RGC (Registered Guidance Counselor)</p>
+            </div>
+        </section>
+
+        <!-- ===== STEM TRACK SECTION ===== -->
+        <section id="stem">
+            <h2>STEM Track</h2>
+            <p>Our STEM (Science, Technology, Engineering, and Mathematics) track prepares students for careers in science, technology, engineering, and healthcare fields.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <i class="fas fa-flask"></i>
+                    <h4>Science Department</h4>
+                    <p class="track-specialization">Physics, Chemistry, Biology</p>
+                    <p class="track-description">Specialized teachers with advanced degrees in their respective science fields, focusing on experimental learning and scientific inquiry.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-calculator"></i>
+                    <h4>Mathematics Department</h4>
+                    <p class="track-specialization">Advanced Mathematics</p>
+                    <p class="track-description">Expert mathematicians who make complex concepts accessible through innovative teaching methods.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-atom"></i>
+                    <h4>Engineering Department</h4>
+                    <p class="track-specialization">Engineering Principles</p>
+                    <p class="track-description">Engineering concepts and problem-solving skills taught by experienced educators.</p>
+                </div>
+            </div>
+
+            <!-- STEM Faculty -->
+            <div class="faculty-section" style="margin-top: 30px;">
+                <h3>STEM Track Faculty</h3>
+                <div class="faculty-grid">
+                    <!-- Maren P. Porio (STEM Nursing) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Maren%20P.%20Porio%2C%20LPT%2C%20RN%2C%20MAN%20-%20Adviser%2C%20GRADE%2011%20-%20PORIO%20(Academic%20Track%20-%20STEM%20(Science%20%26%20Nursing)).jpg/?raw=true" alt="Maren P. Porio" class="faculty-image">
+                        <div class="faculty-name">Maren P. Porio, LPT, RN, MAN</div>
+                        <div class="faculty-position">Grade 11 Adviser - STEM (Science & Nursing)</div>
+                    </div>
+                    
+                    <!-- Jardy G. Fuentes (Math & Engineering) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jardy%20G.%20Fuentes%2C%20LPT%2C%20MAED%20-%20Adviser%2C%20GRADE%2011%20-%20FUENTES%20(Academic%20Track%20-%20Mathematics%20%26%20Engineering).jpg/?raw=true" alt="Jardy G. Fuentes" class="faculty-image">
+                        <div class="faculty-name">Jardy G. Fuentes, LPT, MAED</div>
+                        <div class="faculty-position">Grade 11 Adviser - Math & Engineering</div>
+                    </div>
+                    
+                    <!-- Pinky J. Cagaanan (STEM Grade 12) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Pinky%20J.%20Cagaanan%2C%20MAED-MT%20-%20Adviser%2C%20GRADE%2012%20-%20CAGAANAN%20(Science%2C%20Technology%2C%20Engineering%20%26%20Mathematics).jpg/?raw=true" alt="Pinky J. Cagaanan" class="faculty-image">
+                        <div class="faculty-name">Pinky J. Cagaanan, MAED-MT</div>
+                        <div class="faculty-position">Grade 12 Adviser - STEM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="track-detail">
+                <h3>STEM Track Information</h3>
+                <div class="track-info-grid">
+                    <div class="track-info-item">
+                        <h4>Career Paths</h4>
+                        <p>Engineering, Medicine, Computer Science, Research, Data Science, Biotechnology</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>College Programs</h4>
+                        <p>BS Engineering, BS Medicine, BS Computer Science, BS Biology, BS Chemistry, BS Mathematics</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>Special Features</h4>
+                        <p>Research projects, Science fairs, Math competitions, Laboratory experiments, STEM workshops</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABM TRACK SECTION ===== -->
+        <section id="abm">
+            <h2>ABM Track</h2>
+            <p>Our ABM (Accountancy, Business, and Management) track guides students toward successful careers in business, finance, and entrepreneurship.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Accountancy Department</h4>
+                    <p class="track-specialization">Financial Accounting</p>
+                    <p class="track-description">Certified accountants teaching principles of accounting, financial management, and taxation.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-business-time"></i>
+                    <h4>Business Department</h4>
+                    <p class="track-specialization">Business Management</p>
+                    <p class="track-description">Entrepreneurs and business professionals teaching marketing, management, and organizational behavior.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Entrepreneurship Department</h4>
+                    <p class="track-specialization">Business Development</p>
+                    <p class="track-description">Successful entrepreneurs sharing practical knowledge on starting and managing businesses.</p>
+                </div>
+            </div>
+
+            <!-- ABM Faculty -->
+            <div class="faculty-section" style="margin-top: 30px;">
+                <h3>ABM Track Faculty</h3>
+                <div class="faculty-grid">
+                    <!-- Jane C. Bersaluna (Business & Entrepreneurship) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jane%20C.%20Bersaluna%2C%20LPT%2C%20MAEE%20-%20Adviser%2C%20GRADE%2011%20%E2%80%93%20BERSALUNA%20(Academic%20Track%20-%20Business%20%26%20Entrepreneurship).jpg/?raw=true" alt="Jane C. Bersaluna" class="faculty-image">
+                        <div class="faculty-name">Jane C. Bersaluna, LPT, MAEE</div>
+                        <div class="faculty-position">Grade 11 Adviser - Business & Entrepreneurship</div>
+                    </div>
+                    
+                    <!-- Trizia Angeli F. Rama (ABM Grade 12) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Trizia%20Angeli%20F.%20Rama%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20%E2%80%93%20RAMA%20(Accountancy%2C%20Business%20%26%20Management).jpg/?raw=true" alt="Trizia Angeli F. Rama" class="faculty-image">
+                        <div class="faculty-name">Trizia Angeli F. Rama, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - ABM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="track-detail">
+                <h3>ABM Track Information</h3>
+                <div class="track-info-grid">
+                    <div class="track-info-item">
+                        <h4>Career Paths</h4>
+                        <p>Accountant, Business Manager, Entrepreneur, Financial Analyst, Marketing Manager, Banker</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>College Programs</h4>
+                        <p>BS Accountancy, BS Business Administration, BS Entrepreneurship, BS Economics, BS Marketing</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>Special Features</h4>
+                        <p>Business simulations, Entrepreneurship projects, Financial literacy workshops, Case studies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ASH TRACK SECTION ===== -->
+        <section id="ash">
+            <h2>ASH Track</h2>
+            <p>Our ASH (Arts and Social Sciences) track fosters critical thinking and cultural awareness through literature, arts, and social studies.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <i class="fas fa-book-open"></i>
+                    <h4>Literature Department</h4>
+                    <p class="track-specialization">World Literature</p>
+                    <p class="track-description">Literary scholars teaching analysis, creative writing, and appreciation of diverse literary traditions.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-landmark"></i>
+                    <h4>Social Sciences Department</h4>
+                    <p class="track-specialization">History & Sociology</p>
+                    <p class="track-description">Social scientists teaching Philippine and world history, sociology, psychology, and anthropology.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-palette"></i>
+                    <h4>Arts Department</h4>
+                    <p class="track-specialization">Visual & Performing Arts</p>
+                    <p class="track-description">Artists and performers teaching creative expression through various artistic mediums.</p>
+                </div>
+            </div>
+
+            <!-- ASH Faculty -->
+            <div class="faculty-section" style="margin-top: 30px;">
+                <h3>ASH Track Faculty</h3>
+                <div class="faculty-grid">
+                    <!-- Michelle M. Ortega (Arts & Humanities) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Michelle%20M.%20Ortega%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20-%20ORTEGA%20(Academic%20Track%20-%20Arts%2C%20Social%20Sciences%20%26%20Humanities).jpg/?raw=true" alt="Michelle M. Ortega" class="faculty-image">
+                        <div class="faculty-name">Michelle M. Ortega, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Arts, Social Sciences & Humanities</div>
+                    </div>
+                    
+                    <!-- Jumar D. Masocol (Arts & Humanities) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jumar%20D.%20Masocol%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20%E2%80%93%20MASOCOL%20(Academic%20Track%20-%20Arts%2C%20Social%20Sciences%20%26%20Humanities).jpg/?raw=true" alt="Jumar D. Masocol" class="faculty-image">
+                        <div class="faculty-name">Jumar D. Masocol, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Arts, Social Sciences & Humanities</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="track-detail">
+                <h3>ASH Track Information</h3>
+                <div class="track-info-grid">
+                    <div class="track-info-item">
+                        <h4>Career Paths</h4>
+                        <p>Lawyer, Teacher, Journalist, Social Worker, Artist, Psychologist, Historian</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>College Programs</h4>
+                        <p>AB Literature, AB History, AB Psychology, AB Sociology, Fine Arts, Mass Communication</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>Special Features</h4>
+                        <p>Debate competitions, Cultural performances, Research papers, Art exhibitions, Literary journals</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GAS TRACK SECTION ===== -->
+        <section id="gas">
+            <h2>GAS Track</h2>
+            <p>Our GAS (General Academic Strand) track provides a well-rounded academic foundation for students exploring various career paths.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>General Education</h4>
+                    <p class="track-specialization">Interdisciplinary Studies</p>
+                    <p class="track-description">Versatile educators providing comprehensive preparation for diverse college programs.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-search"></i>
+                    <h4>Research Department</h4>
+                    <p class="track-specialization">Academic Research</p>
+                    <p class="track-description">Research specialists teaching inquiry-based learning and academic investigation skills.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Electives Department</h4>
+                    <p class="track-specialization">Specialized Subjects</p>
+                    <p class="track-description">Faculty offering elective courses across multiple disciplines based on student interests.</p>
+                </div>
+            </div>
+
+            <!-- GAS Faculty -->
+            <div class="faculty-section" style="margin-top: 30px;">
+                <h3>GAS Track Faculty</h3>
+                <div class="faculty-grid">
+                    <!-- Engr. Aireen Hope B. Ga-as (GAS Grade 12) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Engr.%20Aireen%20Hope%20B.%20Ga-as%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20%E2%80%93%20GA-AS%20(Alternative%20Learning%20System%2C%20General%20Academic%20Strand).jpg/?raw=true" alt="Engr. Aireen Hope B. Ga-as" class="faculty-image">
+                        <div class="faculty-name">Engr. Aireen Hope B. Ga-as, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - GAS/ALS</div>
+                    </div>
+                    
+                    <!-- Mar Adrian B. Brandares (GAS Grade 12) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Mar%20Adrian%20B.%20Brandares%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20-%20BRANDARES%20(General%20Academic%20Strand).jpg/?raw=true" alt="Mar Adrian B. Brandares" class="faculty-image">
+                        <div class="faculty-name">Mar Adrian B. Brandares, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - GAS</div>
+                    </div>
+                    
+                    <!-- Rafdi S. Abasolo (GAS Grade 12) -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Rafdi%20S.%20Abasolo%2C%20Ph.D.%20-%20Adviser%2C%20GRADE%2012%20-%20ABASOLO%20(General%20Academic%20Strand).jpg/?raw=true" alt="Rafdi S. Abasolo" class="faculty-image">
+                        <div class="faculty-name">Rafdi S. Abasolo, Ph.D.</div>
+                        <div class="faculty-position">Grade 12 Adviser - GAS</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="track-detail">
+                <h3>GAS Track Information</h3>
+                <div class="track-info-grid">
+                    <div class="track-info-item">
+                        <h4>Career Paths</h4>
+                        <p>Flexible preparation for any college program, Undecided career exploration, Multiple options</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>College Programs</h4>
+                        <p>Can qualify for most college programs, Allows exploration before specialization</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>Special Features</h4>
+                        <p>Broad subject exposure, Career guidance programs, College preparation workshops, Portfolio development</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TVL TRACK SECTION ===== -->
+        <section id="tvl">
+            <h2>TVL Track</h2>
+            <p>Our TVL (Technical-Vocational-Livelihood) track prepares students for immediate employment through hands-on technical training.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>ICT Department</h4>
+                    <p class="track-specialization">Information & Communications Technology</p>
+                    <p class="track-description">IT professionals teaching computer hardware, software, networking, programming, digital literacy, and technical support skills.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Home Economics Department</h4>
+                    <p class="track-specialization">Culinary Arts & Hospitality Management</p>
+                    <p class="track-description">Chefs and hospitality experts teaching cooking, baking, bartending, food service, housekeeping, and tourism management.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-spa"></i>
+                    <h4>Beauty & Wellness Department</h4>
+                    <p class="track-specialization">Beauty Care & Wellness Services</p>
+                    <p class="track-description">Certified beauty and wellness professionals teaching haircare, skincare, nail care, and basic wellness services for immediate employment.</p>
+                </div>
+            </div>
+
+            <!-- TVL Faculty -->
+            <div class="faculty-section" style="margin-top: 30px;">
+                <h3>TVL Track Faculty</h3>
+                <div class="faculty-grid">
+                    <!-- ICT Faculty -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Ferlie%20Meh%20M.%20Riola%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20%E2%80%93%20RIOLA%20(TECHPRO%20%E2%80%93%20ICT).jpg/?raw=true" alt="Ferlie Meh M. Riola" class="faculty-image">
+                        <div class="faculty-name">Ferlie Meh M. Riola, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - TECHPRO ICT</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Lindyl%20G.%20Pagulong%2C%20LPT%2C%20MIT%20-%20Adviser%2C%20GRADE%2011%20-%20PAGULONG%20(TECHPRO%20%E2%80%93%20ICT).jpg/?raw=true" alt="Lindyl G. Pagulong" class="faculty-image">
+                        <div class="faculty-name">Lindyl G. Pagulong, LPT, MIT</div>
+                        <div class="faculty-position">Grade 11 Adviser - TECHPRO ICT</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Ranel%20S.%20Nonol%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20%E2%80%93%20NONOL%20(TVL%20-%20ICT).jpg/?raw=true" alt="Ranel S. Nonol" class="faculty-image">
+                        <div class="faculty-name">Ranel S. Nonol, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL ICT</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Chrizales%20L.%20Camporedondo%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20-%20CAMPOREDONDO%20(TVL%20-%20ICT).jpg/?raw=true" alt="Chrizales L. Camporedondo" class="faculty-image">
+                        <div class="faculty-name">Chrizales L. Camporedondo, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL ICT</div>
+                    </div>
+                    
+                    <!-- Food & Beverage Faculty -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jessa%20Mae%20O.%20Mondejar%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20%E2%80%93%20MONDEJAR%20(TECHPRO%20-%20Food%20%26%20Beverage%20Operations).jpg/?raw=true" alt="Jessa Mae O. Mondejar" class="faculty-image">
+                        <div class="faculty-name">Jessa Mae O. Mondejar, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Food & Beverage Operations</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jennifer%20M.%20Castro%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20%E2%80%93%20CASTRO%20(TECHPRO%20-%20Food%20%26%20Beverage%20Operations).jpg/?raw=true" alt="Jennifer M. Castro" class="faculty-image">
+                        <div class="faculty-name">Jennifer M. Castro, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Food & Beverage Operations</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Jessil%20F.%20Padillo%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20%E2%80%93%20PADILLO%20(TVL%20-%20Cookery).jpg/?raw=true" alt="Jessil F. Padillo" class="faculty-image">
+                        <div class="faculty-name">Jessil F. Padillo, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL Cookery</div>
+                    </div>
+                    
+                    <!-- Bartending Faculty -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Khemeza%20L.%20Ordaneza%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20-%20ORDANEZA%20(TVL%20-%20Bartending).jpg/?raw=true" alt="Khemeza L. Ordaneza" class="faculty-image">
+                        <div class="faculty-name">Khemeza L. Ordaneza, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL Bartending</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Clarence%20D.%20Gascon%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20%E2%80%93%20GASCON%20(TVL%20-%20Bartending).jpg/?raw=true" alt="Clarence D. Gascon" class="faculty-image">
+                        <div class="faculty-name">Clarence D. Gascon, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL Bartending</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Love%20D.%20Tapdasan%2C%20LPT%20-%20Adviser%2C%20GRADE%2012%20-%20TAPDASAN%20(TVL%20-%20Bartending).jpg/?raw=true" alt="Love D. Tapdasan" class="faculty-image">
+                        <div class="faculty-name">Love D. Tapdasan, LPT</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL Bartending</div>
+                    </div>
+                    
+                    <!-- Housekeeping Faculty -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Crystal%20Mae%20S.%20Datulayta%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20-%20DATULAYTA%20(Alternative%20Learning%20System%2C%20TECHPRO%20-%20Housekeeping).jpg/?raw=true" alt="Crystal Mae S. Datulayta" class="faculty-image">
+                        <div class="faculty-name">Crystal Mae S. Datulayta, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Housekeeping</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Ruffa%20C.%20Via%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20-%20VIA%20(TECHPRO%20-%20Housekeeping).jpg/?raw=true" alt="Ruffa C. Via" class="faculty-image">
+                        <div class="faculty-name">Ruffa C. Via, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Housekeeping</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Mark%20Gil%20M.%20Quibod%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20-%20QUIBOD%20(TECHPRO%20-%20Housekeeping).jpg/?raw=true" alt="Mark Gil M. Quibod" class="faculty-image">
+                        <div class="faculty-name">Mark Gil M. Quibod, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Housekeeping</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Daisy%20C.%20Sanico%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20-%20SANICO%20(TECHPRO%20-%20Family%20Consumer%20Science%2C%20Housekeeping).jpg/?raw=true" alt="Daisy C. Sanico" class="faculty-image">
+                        <div class="faculty-name">Daisy C. Sanico, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Family Consumer Science, Housekeeping</div>
+                    </div>
+                    
+                    <!-- Aesthetics/Beauty Faculty -->
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Cristine%20Joy%20A.%20Albaera%2C%20LPT%20-%20Adviser%2C%20GRADE%2011%20%E2%80%93%20ALBAERA%20(TECHPRO%20-%20Aesthetic%2C%20Wellness%20%26%20Human%20Care).jpg/?raw=true" alt="Cristine Joy A. Albaera" class="faculty-image">
+                        <div class="faculty-name">Cristine Joy A. Albaera, LPT</div>
+                        <div class="faculty-position">Grade 11 Adviser - Aesthetics, Wellness & Human Care</div>
+                    </div>
+                    
+                    <div class="faculty-card">
+                        <img src="https://github.com/dagranova/school-info/blob/main/images/SNHSSH_teachers/Sergio%20R.%20Bacamante%20III%20-%20Adviser%2C%20GRADE%2012%20%E2%80%93%20BACAMANTE%20(TVL%20-%20Hairdressing).jpg/?raw=true" alt="Sergio R. Bacamante III" class="faculty-image">
+                        <div class="faculty-name">Sergio R. Bacamante III</div>
+                        <div class="faculty-position">Grade 12 Adviser - TVL Hairdressing</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="track-detail">
+                <h3>TVL Track Information</h3>
+                <div class="track-info-grid">
+                    <div class="track-info-item">
+                        <h4>Career Paths</h4>
+                        <p>ICT Technician, Computer Programmer, Chef, Bartender, Hotel Staff, Beauty Specialist, Entrepreneur, Food Service Manager</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>College Programs</h4>
+                        <p>BS Information Technology, BS Computer Science, BS Hospitality Management, BS Culinary Arts, BS Tourism Management, BS Entrepreneurship</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>Specializations</h4>
+                        <p>ICT Programming, Computer Hardware Servicing, Cookery, Bartending, Housekeeping, Food & Beverage Services, Beauty Care Services, Nail Care Services</p>
+                    </div>
+                    <div class="track-info-item">
+                        <h4>Certifications</h4>
+                        <p>Technical certificates, NC II/III Certifications, TESDA-recognized credentials, Industry-recognized certifications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE SUBJECTS SECTION ===== -->
+        <section id="core">
+            <h2>Core Subjects</h2>
+            <p>Our core subject teachers provide comprehensive development in essential subjects for holistic student growth.</p>
+
+            <div class="track-grid">
+                <div class="track-card">
+                    <i class="fas fa-language"></i>
+                    <h4>Languages Department</h4>
+                    <p class="track-specialization">English & Filipino</p>
+                    <p class="track-description">Language experts focusing on communication skills, literature, and cultural appreciation.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-heart"></i>
+                    <h4>HOPE Department</h4>
+                    <p class="track-specialization">Health Optimizing Physical Education</p>
+                    <p class="track-description">Specialists in Health Optimizing Physical Education focusing on fitness, wellness, and overall health development.</p>
+                </div>
+
+                <div class="track-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Values Education</h4>
+                    <p class="track-specialization">Character Formation</p>
+                    <p class="track-description">Dedicated educators teaching ethics, moral values, and responsible citizenship.</p>
+                </div>
+            </div>
+
+            <!-- Back to Home Button -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="back-home-button">
+                    <i class="fas fa-home"></i> Back to Main Site
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Logo and Description -->
+                <div class="footer-section">
+                    <img src="https://github.com/dagranova/school-info/blob/main/images/snhs-logo.jpg/?raw=true" alt="Sulop National High School Logo" class="footer-school-logo">
+                    <h4>Sulop National High School</h4>
+                    <p>Senior High School Department - Preparing students for college, career, and life success.</p>
+                </div>
+
+                <!-- Quick Navigation Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#principal">School Principal</a></li>
+                        <li><a href="#faculties">School Faculties</a></li>
+                        <li><a href="#stem">STEM Track</a></li>
+                        <li><a href="#abm">ABM Track</a></li>
+                        <li><a href="#ash">ASH Track</a></li>
+                        <li><a href="#gas">GAS Track</a></li>
+                        <li><a href="#tvl">TVL Track</a></li>
+                        <li><a href="#core">Core Subjects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Contact Info -->
+                <div class="footer-section">
+                    <h4>Senior High Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> CII Drive, Poblacion, Sulop, Davao del Sur</li>
+                        <li><i class="fas fa-phone"></i> 0917 115 7352</li>
+                        <li><i class="fas fa-envelope"></i> sulop.nhs.shs@deped.gov.ph</li>
+                        <li><i class="fab fa-facebook"></i> fb.com/SulopNHS-SHS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Information -->
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Sulop National High School - Senior High Department. All Rights Reserved.</p>
+                <p>This is the official Senior High School website for informational purposes.</p>
+                <p><small>Created by <strong>Harvey Gel B. Cimagala</strong>, Grade 12 - Olivo | Sulop National High School</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== EXTERNAL JAVASCRIPT FILE ===== -->
+    <script src="branch.js"></script>
+    
+    <!-- ===== CAROUSEL NAVIGATION SCRIPT ===== -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
